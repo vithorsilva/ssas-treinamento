@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Laboratorios", "Laboratorios", "{6241F8DE-333B-4B5F-9DD4-81F9470C7630}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demonstracoes", "Demonstracoes", "{956DDEF8-48C8-400B-9DC7-AA6F653ED284}"
+EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "DEMO02_INICIO", "Demonstracoes\DEMO02_INICIO\DEMO02_INICIO.smproj", "{AFBB9568-4D95-4357-A09C-5E94AB1B9F25}"
+EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "LAB01_SOLUCAO", "Laboratorios\LAB01_SOLUCAO\LAB01_SOLUCAO.smproj", "{0891CDFB-9E86-49CA-86D8-6DB61D41CE43}"
+EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "DEMO03_INICIO", "Demonstracoes\DEMO03_INICIO\DEMO03_INICIO.smproj", "{0E537A54-2C45-4E70-AC80-BC4D87F25BD0}"
+EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "DEMO03_FINAL", "Demonstracoes\DEMO03_FINAL\DEMO03_FINAL.smproj", "{D727F1E3-E122-45D3-928E-06AEA41ABCFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "final", "final", "{54BF56F3-2444-435D-8B15-DAE167A32F3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inicio", "inicio", "{7150C34E-37F7-49F8-92E6-36530D0E2C87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|x86 = Development|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFBB9568-4D95-4357-A09C-5E94AB1B9F25}.Development|x86.ActiveCfg = Development|x86
+		{AFBB9568-4D95-4357-A09C-5E94AB1B9F25}.Development|x86.Build.0 = Development|x86
+		{AFBB9568-4D95-4357-A09C-5E94AB1B9F25}.Development|x86.Deploy.0 = Development|x86
+		{0891CDFB-9E86-49CA-86D8-6DB61D41CE43}.Development|x86.ActiveCfg = Development|x86
+		{0891CDFB-9E86-49CA-86D8-6DB61D41CE43}.Development|x86.Build.0 = Development|x86
+		{0891CDFB-9E86-49CA-86D8-6DB61D41CE43}.Development|x86.Deploy.0 = Development|x86
+		{0E537A54-2C45-4E70-AC80-BC4D87F25BD0}.Development|x86.ActiveCfg = Development|x86
+		{0E537A54-2C45-4E70-AC80-BC4D87F25BD0}.Development|x86.Build.0 = Development|x86
+		{0E537A54-2C45-4E70-AC80-BC4D87F25BD0}.Development|x86.Deploy.0 = Development|x86
+		{D727F1E3-E122-45D3-928E-06AEA41ABCFE}.Development|x86.ActiveCfg = Development|x86
+		{D727F1E3-E122-45D3-928E-06AEA41ABCFE}.Development|x86.Build.0 = Development|x86
+		{D727F1E3-E122-45D3-928E-06AEA41ABCFE}.Development|x86.Deploy.0 = Development|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AFBB9568-4D95-4357-A09C-5E94AB1B9F25} = {7150C34E-37F7-49F8-92E6-36530D0E2C87}
+		{0891CDFB-9E86-49CA-86D8-6DB61D41CE43} = {6241F8DE-333B-4B5F-9DD4-81F9470C7630}
+		{0E537A54-2C45-4E70-AC80-BC4D87F25BD0} = {7150C34E-37F7-49F8-92E6-36530D0E2C87}
+		{D727F1E3-E122-45D3-928E-06AEA41ABCFE} = {54BF56F3-2444-435D-8B15-DAE167A32F3F}
+		{54BF56F3-2444-435D-8B15-DAE167A32F3F} = {956DDEF8-48C8-400B-9DC7-AA6F653ED284}
+		{7150C34E-37F7-49F8-92E6-36530D0E2C87} = {956DDEF8-48C8-400B-9DC7-AA6F653ED284}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB1E2D02-D07F-4878-AE87-E6AADCE6B46A}
+	EndGlobalSection
+EndGlobal
