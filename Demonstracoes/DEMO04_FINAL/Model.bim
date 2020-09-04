@@ -969,6 +969,166 @@
             }
           }
         ]
+      },
+      {
+        "name": "DimCalendarioShip",
+        "columns": [
+          {
+            "type": "calculatedTableColumn",
+            "name": "Shipdate",
+            "dataType": "dateTime",
+            "isNameInferred": false,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Date]"
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "DAY(DimCalendarioShip[Shipdate])"
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "MONTH(DimCalendarioShip[Shipdate])"
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "YEAR(DimCalendarioShip[Shipdate])"
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "FORMAT(DimCalendarioShip[Shipdate],\"mmmm\")"
+          },
+          {
+            "type": "calculated",
+            "name": "WeekDayName",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "FORMAT(DimCalendarioShip[Shipdate],\"ddd\")"
+          },
+          {
+            "type": "calculated",
+            "name": "Period",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "FORMAT(DimCalendarioShip[Shipdate],\"mmm/yyyy\")"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Dia",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Dia]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "MesNro",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[MesNro]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Mês",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Mês]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Ano",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Ano]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "CompetenciaNro",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[CompetenciaNro]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Competencia",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Competencia]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "SemanaAno",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[SemanaAno]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "DiaSemanaNro",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[DiaSemanaNro]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "DiaSemana",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[DiaSemana]"
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Trimestre",
+            "dataType": "string",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Trimestre]"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "CalculatedTable 1",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "",
+                "VAR MenorData = MIN(MIN(FactInternetSales[DueDate]),MIN(FactResellerSales[ShipDate]))",
+                "VAR MaiorData = MAX(MAX(FactInternetSales[DueDate]),MAX(FactResellerSales[ShipDate]))",
+                "RETURN ",
+                "    ADDCOLUMNS(CALENDAR(MenorData,MaiorData),",
+                "            \"Dia\",DAY([Date]),",
+                "            \"MesNro\",MONTH([Date]),",
+                "            \"Mês\",FORMAT([Date],\"mmmm\"),",
+                "            \"Ano\",YEAR([Date]),",
+                "            \"CompetenciaNro\",FORMAT([Date],\"yyyymm\"),",
+                "            \"Competencia\",FORMAT([Date],\"mm/yyyy\"),",
+                "            \"SemanaAno\",WEEKNUM([Date],1),",
+                "            \"DiaSemanaNro\",WEEKDAY([Date],1),",
+                "            \"DiaSemana\",FORMAT([Date],\"dddd\"),",
+                "            \"Trimestre\",CONCATENATE(ROUNDUP(DIVIDE(MONTH([Date]),3),0),\" Tri\"))"
+              ]
+            }
+          }
+        ]
       }
     ],
     "relationships": [
