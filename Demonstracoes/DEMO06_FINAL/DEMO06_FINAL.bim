@@ -20,12 +20,36 @@
           "AuthenticationKind": "ServiceAccount",
           "EncryptConnection": false
         }
+      },
+      {
+        "type": "structured",
+        "name": "File/C:\\Users\\vithor\\source\\repos\\TREINAMENTO_SSAS\\TREINAMENTO_SSAS\\Apoio\\Permis",
+        "connectionDetails": {
+          "protocol": "file",
+          "address": {
+            "path": "C:\\Users\\vithor\\source\\repos\\TREINAMENTO_SSAS\\TREINAMENTO_SSAS\\Apoio\\Permissoes.xlsx"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "options": {},
+        "credential": {
+          "AuthenticationKind": "Windows",
+          "kind": "File",
+          "path": "c:\\users\\vithor\\source\\repos\\treinamento_ssas\\treinamento_ssas\\apoio\\permissoes.xlsx",
+          "Username": ".\\vithor"
+        },
+        "contextExpression": [
+          "let",
+          "    #\"0001\" = Excel.Workbook(..., null, true)",
+          "in",
+          "    #\"0001\""
+        ]
       }
     ],
     "tables": [
       {
         "name": "DimDate",
-        "dataCategory": "Time",
         "columns": [
           {
             "name": "DateKey",
@@ -100,7 +124,6 @@
           {
             "name": "Date",
             "dataType": "dateTime",
-            "isKey": true,
             "sourceColumn": "FullDateAlternateKey",
             "formatString": "Short Date",
             "displayFolder": "Colunas",
@@ -663,20 +686,6 @@
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "DueDateKey"
-          },
-          {
-            "type": "calculated",
-            "name": "Profit",
-            "dataType": "decimal",
-            "isDataTypeInferred": true,
-            "expression": "FactResellerSales[SalesAmount] - FactResellerSales[TotalProductCost]",
-            "formatString": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1046\" DisplayName=\"R$ Portuguese (Brazil)\" Symbol=\"R$\" PositivePattern=\"2\" NegativePattern=\"9\" /></Format>"
-              }
-            ]
           }
         ],
         "partitions": [
@@ -702,50 +711,6 @@
             "expression": "SUM([SalesAmount])",
             "formatString": "\\$#,0;(\\$#,0);\\$#,0",
             "displayFolder": "Indicadores",
-            "kpi": {
-              "targetExpression": "'FactResellerSales'[Lojas Vendas - Total Vendido Meta]",
-              "targetFormatString": "\\$#,0;(\\$#,0);\\$#,0",
-              "statusGraphic": "Traffic Light - Single",
-              "statusExpression": [
-                "var x='FactResellerSales'[Lojas Vendas - Total Vendido]/'FactResellerSales'[_Lojas Vendas - Total Vendido Goal] return",
-                "            if(ISBLANK(x),BLANK(),",
-                "                    If(x<0.7,-1,",
-                "\t                If(x<0.85,0,1)",
-                "                )",
-                "            )",
-                "            "
-              ],
-              "annotations": [
-                {
-                  "name": "GoalType",
-                  "value": "Measure"
-                },
-                {
-                  "name": "KpiStatusType",
-                  "value": "Linear"
-                },
-                {
-                  "name": "KpiThresholdType",
-                  "value": "Percentage"
-                },
-                {
-                  "name": "KpiThresholdOrdering",
-                  "value": "Ascending"
-                },
-                {
-                  "name": "KpiThresholdCount",
-                  "value": "2"
-                },
-                {
-                  "name": "KpiThreshold_0",
-                  "value": "70"
-                },
-                {
-                  "name": "KpiThreshold_1",
-                  "value": "85"
-                }
-              ]
-            },
             "annotations": [
               {
                 "name": "Format",
@@ -806,101 +771,6 @@
             "expression": "SUM([OrderQuantity])",
             "formatString": "#,0",
             "displayFolder": "Indicadores"
-          },
-          {
-            "name": "Lojas Vendas - Total Vendido Meta",
-            "expression": "SUM(FactSalesQuota[SalesAmountQuota])",
-            "formatString": "\\$#,0;(\\$#,0);\\$#,0",
-            "displayFolder": "Indicadores",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "Lojas Vendas - Total Lucro",
-            "expression": "SUM([Profit])",
-            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
-            "kpi": {
-              "targetExpression": "'FactResellerSales'[Lojas Vendas - Total Lucro Meta]",
-              "targetFormatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
-              "statusGraphic": "Three Symbols UnCircled Colored",
-              "statusExpression": [
-                "var x='FactResellerSales'[Lojas Vendas - Total Lucro]/'FactResellerSales'[_Lojas Vendas - Total Lucro Goal] return",
-                "            if(ISBLANK(x),BLANK(),",
-                "                    If(x<0.85,-1,",
-                "\t                If(x<1,0,1)",
-                "                )",
-                "            )",
-                "            "
-              ],
-              "annotations": [
-                {
-                  "name": "GoalType",
-                  "value": "Measure"
-                },
-                {
-                  "name": "KpiStatusType",
-                  "value": "Linear"
-                },
-                {
-                  "name": "KpiThresholdType",
-                  "value": "Percentage"
-                },
-                {
-                  "name": "KpiThresholdOrdering",
-                  "value": "Ascending"
-                },
-                {
-                  "name": "KpiThresholdCount",
-                  "value": "2"
-                },
-                {
-                  "name": "KpiThreshold_0",
-                  "value": "85"
-                },
-                {
-                  "name": "KpiThreshold_1",
-                  "value": "100"
-                }
-              ]
-            },
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "Lojas Vendas - Total Lucro (Ano Anterior)",
-            "expression": [
-              "",
-              "CALCULATE([Lojas Vendas - Total Lucro],DATEADD(DimDate[Date],-1,YEAR))"
-            ],
-            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
-              }
-            ]
-          },
-          {
-            "name": "Lojas Vendas - Total Lucro Meta",
-            "expression": [
-              "",
-              "IF([Lojas Vendas - Total Lucro (Ano Anterior)]<0,0,[Lojas Vendas - Total Lucro (Ano Anterior)]*1.05)"
-            ],
-            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
-              }
-            ]
           }
         ]
       },
@@ -1479,30 +1349,18 @@
         ]
       },
       {
-        "name": "FactSalesQuota",
+        "name": "tPermissoes",
+        "isHidden": true,
         "columns": [
           {
-            "name": "SalesQuotaKey",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "SalesQuotaKey"
+            "name": "EmpregadoLogin",
+            "dataType": "string",
+            "sourceColumn": "EmpregadoLogin"
           },
           {
-            "name": "EmployeeKey",
+            "name": "SalesTerritoryID",
             "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "EmployeeKey"
-          },
-          {
-            "name": "DateKey",
-            "dataType": "int64",
-            "isHidden": true,
-            "sourceColumn": "DateKey"
-          },
-          {
-            "name": "SalesAmountQuota",
-            "dataType": "decimal",
-            "sourceColumn": "SalesAmountQuota"
+            "sourceColumn": "SalesTerritoryID"
           }
         ],
         "partitions": [
@@ -1513,11 +1371,11 @@
               "type": "m",
               "expression": [
                 "let",
-                "    Source = #\"SQL/DW\",",
-                "    dbo_FactSalesQuota = Source{[Schema=\"dbo\",Item=\"FactSalesQuota\"]}[Data],",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(dbo_FactSalesQuota,{\"SalesQuotaKey\", \"EmployeeKey\", \"DateKey\", \"SalesAmountQuota\"})",
+                "    Source = #\"File/C:\\Users\\vithor\\source\\repos\\TREINAMENTO_SSAS\\TREINAMENTO_SSAS\\Apoio\\Permis\",",
+                "    tPermissoes_Table = Source{[Item=\"tPermissoes\",Kind=\"Table\"]}[Data],",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(tPermissoes_Table,{{\"SalesTerritoryID\", Int64.Type}})",
                 "in",
-                "    #\"Removed Other Columns\""
+                "    #\"Changed Type\""
               ]
             }
           }
@@ -1610,20 +1468,6 @@
         "toTable": "DimDate",
         "toColumn": "DateKey",
         "isActive": false
-      },
-      {
-        "name": "647c4cfb-7861-4cfa-8a9d-5d2f3c7a40b4",
-        "fromTable": "FactSalesQuota",
-        "fromColumn": "EmployeeKey",
-        "toTable": "DimEmployee",
-        "toColumn": "EmployeeKey"
-      },
-      {
-        "name": "3d28550e-9a9b-4f1c-ad8f-3784c78fa48b",
-        "fromTable": "FactSalesQuota",
-        "fromColumn": "DateKey",
-        "toTable": "DimDate",
-        "toColumn": "DateKey"
       }
     ],
     "perspectives": [
@@ -1856,23 +1700,6 @@
               {
                 "name": "UnitPrice"
               }
-            ],
-            "measures": [
-              {
-                "name": "Internet Vendas - Custo Produção Total"
-              },
-              {
-                "name": "Internet Vendas - Faturamento Total"
-              },
-              {
-                "name": "Internet Vendas - Frete Total"
-              },
-              {
-                "name": "Internet Vendas - Impostos Total"
-              },
-              {
-                "name": "Internet Vendas - Quantidade Total"
-              }
             ]
           }
         ]
@@ -2038,30 +1865,9 @@
               },
               {
                 "name": "DueDateKey"
-              },
-              {
-                "name": "Profit"
               }
             ],
             "measures": [
-              {
-                "name": "Lojas Vendas - Custo Médio"
-              },
-              {
-                "name": "Lojas Vendas - Custo Total"
-              },
-              {
-                "name": "Lojas Vendas - Total Frete"
-              },
-              {
-                "name": "Lojas Vendas - Total Impostos"
-              },
-              {
-                "name": "Lojas Vendas - Total Items"
-              },
-              {
-                "name": "Lojas Vendas - Total Vendido Meta"
-              },
               {
                 "name": "Lojas Vendas - Total Vendido"
               }
@@ -2127,23 +1933,6 @@
               },
               {
                 "name": "ResellerName"
-              }
-            ]
-          },
-          {
-            "name": "FactSalesQuota",
-            "columns": [
-              {
-                "name": "SalesQuotaKey"
-              },
-              {
-                "name": "EmployeeKey"
-              },
-              {
-                "name": "DateKey"
-              },
-              {
-                "name": "SalesAmountQuota"
               }
             ]
           }
@@ -2287,67 +2076,97 @@
               },
               {
                 "name": "UnitPrice"
-              },
-              {
-                "name": "DueDateKey"
-              },
-              {
-                "name": "EmployeeKey"
-              },
-              {
-                "name": "ExtendedAmount"
-              },
-              {
-                "name": "Freight"
-              },
-              {
-                "name": "OrderDateKey"
-              },
-              {
-                "name": "OrderQuantity"
-              },
-              {
-                "name": "ProductKey"
-              },
-              {
-                "name": "ProductStandardCost"
-              },
-              {
-                "name": "ResellerKey"
-              },
-              {
-                "name": "SalesOrderLineNumber"
-              },
-              {
-                "name": "SalesOrderNumber"
-              },
-              {
-                "name": "ShipDateKey"
-              },
-              {
-                "name": "TotalProductCost"
-              },
-              {
-                "name": "UnitPriceDiscountPct"
-              }
-            ],
-            "measures": [
-              {
-                "name": "Lojas Vendas - Custo Médio"
-              },
-              {
-                "name": "Lojas Vendas - Custo Total"
-              },
-              {
-                "name": "Lojas Vendas - Total Frete"
-              },
-              {
-                "name": "Lojas Vendas - Total Impostos"
-              },
-              {
-                "name": "Lojas Vendas - Total Items"
               }
             ]
+          }
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "name": "Leitura Total",
+        "description": "Acesso leitura total ao banco de dados",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "vithor",
+            "memberId": "S-1-5-21-2658081659-1126528674-4145657689-1001"
+          }
+        ]
+      },
+      {
+        "name": "Leitura - Warehouse e Outros Produtos",
+        "modelPermission": "read",
+        "tablePermissions": [
+          {
+            "name": "DimReseller",
+            "filterExpression": "DimReseller[BusinessType]=\"Warehouse\""
+          },
+          {
+            "name": "DimProduct",
+            "filterExpression": "DimProduct[ProductCategory] <> \"Bikes\""
+          },
+          {
+            "name": "DimEmployee",
+            "metadataPermission": "none"
+          },
+          {
+            "name": "FactInternetSales",
+            "metadataPermission": "none"
+          },
+          {
+            "name": "DimSalesTerritory",
+            "metadataPermission": "none"
+          },
+          {
+            "name": "DimCustomer",
+            "metadataPermission": "none"
+          },
+          {
+            "name": "DimDate",
+            "columnPermissions": [
+              {
+                "name": "FiscalYear"
+              },
+              {
+                "name": "FiscalQuarter"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Leitura - Warehouse",
+        "modelPermission": "read",
+        "tablePermissions": [
+          {
+            "name": "DimReseller",
+            "filterExpression": "DimReseller[BusinessType]=\"Warehouse\""
+          }
+        ]
+      },
+      {
+        "name": "Leitura - Territorio Dinamico",
+        "modelPermission": "read",
+        "members": [
+          {
+            "memberName": "usuario_bi_teste",
+            "memberId": "S-1-5-21-2658081659-1126528674-4145657689-1042"
+          }
+        ],
+        "tablePermissions": [
+          {
+            "name": "DimSalesTerritory",
+            "filterExpression": [
+              "DimSalesTerritory[SalesTerritoryKey]=",
+              "\tLOOKUPVALUE(tPermissoes[SalesTerritoryID],",
+              "\ttPermissoes[EmpregadoLogin],USERNAME(),",
+              "\ttPermissoes[SalesTerritoryID],DimSalesTerritory[SalesTerritoryKey])"
+            ]
+          },
+          {
+            "name": "tPermissoes",
+            "filterExpression": "FALSE()"
           }
         ]
       }

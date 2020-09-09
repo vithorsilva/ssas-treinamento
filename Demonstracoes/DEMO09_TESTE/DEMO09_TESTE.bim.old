@@ -32,13 +32,15 @@
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "DateKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "DayNumberOfWeek",
             "dataType": "int64",
             "sourceColumn": "DayNumberOfWeek",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "summarizeBy": "none"
           },
           {
@@ -46,13 +48,15 @@
             "dataType": "string",
             "sourceColumn": "EnglishDayNameOfWeek",
             "sortByColumn": "DayNumberOfWeek",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "DayNumberOfMonth",
             "dataType": "int64",
             "sourceColumn": "DayNumberOfMonth",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "summarizeBy": "none"
           },
           {
@@ -60,13 +64,15 @@
             "dataType": "string",
             "sourceColumn": "EnglishMonthName",
             "sortByColumn": "MonthNumberOfYear",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "MonthNumberOfYear",
             "dataType": "int64",
             "sourceColumn": "MonthNumberOfYear",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "summarizeBy": "none"
           },
           {
@@ -74,6 +80,7 @@
             "dataType": "int64",
             "sourceColumn": "CalendarQuarter",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "summarizeBy": "none"
           },
           {
@@ -81,6 +88,7 @@
             "dataType": "int64",
             "sourceColumn": "CalendarYear",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "summarizeBy": "none"
           },
           {
@@ -88,6 +96,7 @@
             "dataType": "int64",
             "sourceColumn": "FiscalQuarter",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "summarizeBy": "none"
           },
           {
@@ -95,6 +104,7 @@
             "dataType": "int64",
             "sourceColumn": "FiscalYear",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "summarizeBy": "none"
           },
           {
@@ -104,6 +114,7 @@
             "sourceColumn": "FullDateAlternateKey",
             "formatString": "Short Date",
             "displayFolder": "Colunas",
+            "encodingHint": "hash",
             "annotations": [
               {
                 "name": "Format",
@@ -118,7 +129,8 @@
             "isDataTypeInferred": true,
             "expression": "FORMAT(DimDate[Date],\"mmm/yyyy\")",
             "sortByColumn": "PeriodNro",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "type": "calculated",
@@ -127,7 +139,8 @@
             "isDataTypeInferred": true,
             "isHidden": true,
             "expression": "FORMAT(DimDate[Date],\"yyyymm\")",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           }
         ],
         "partitions": [
@@ -156,28 +169,32 @@
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "EmployeeKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "ParentEmployeeKey",
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "ParentEmployeeKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "EmployeeNationalIDAlternateKey",
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "EmployeeNationalIDAlternateKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "ParentEmployeeNationalIDAlternateKey",
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "ParentEmployeeNationalIDAlternateKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "DepartmentName",
@@ -504,61 +521,70 @@
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "ProductKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "OrderDateKey",
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "OrderDateKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "ShipDateKey",
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "ShipDateKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "ResellerKey",
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "ResellerKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "EmployeeKey",
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "EmployeeKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "SalesOrderNumber",
             "dataType": "string",
             "sourceColumn": "SalesOrderNumber",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "SalesOrderLineNumber",
             "dataType": "int64",
             "sourceColumn": "SalesOrderLineNumber",
             "displayFolder": "Colunas",
+            "encodingHint": "value",
             "summarizeBy": "count"
           },
           {
             "name": "OrderQuantity",
             "dataType": "int64",
             "sourceColumn": "OrderQuantity",
-            "displayFolder": "Colunas Mensuráveis"
+            "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value"
           },
           {
             "name": "UnitPrice",
-            "dataType": "decimal",
+            "dataType": "double",
             "sourceColumn": "UnitPrice",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
@@ -568,10 +594,11 @@
           },
           {
             "name": "ExtendedAmount",
-            "dataType": "decimal",
+            "dataType": "double",
             "sourceColumn": "ExtendedAmount",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
@@ -585,20 +612,23 @@
             "sourceColumn": "UnitPriceDiscountPct",
             "formatString": "0.00%;-0.00%;0.00%",
             "displayFolder": "Colunas",
+            "encodingHint": "value",
             "summarizeBy": "none"
           },
           {
             "name": "DiscountAmount",
             "dataType": "double",
             "sourceColumn": "DiscountAmount",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "value"
           },
           {
             "name": "ProductStandardCost",
-            "dataType": "decimal",
+            "dataType": "double",
             "sourceColumn": "ProductStandardCost",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
@@ -608,10 +638,11 @@
           },
           {
             "name": "TotalProductCost",
-            "dataType": "decimal",
+            "dataType": "double",
             "sourceColumn": "TotalProductCost",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
@@ -621,10 +652,11 @@
           },
           {
             "name": "SalesAmount",
-            "dataType": "decimal",
+            "dataType": "double",
             "sourceColumn": "SalesAmount",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
@@ -634,10 +666,11 @@
           },
           {
             "name": "TaxAmt",
-            "dataType": "decimal",
+            "dataType": "double",
             "sourceColumn": "TaxAmt",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
@@ -647,10 +680,11 @@
           },
           {
             "name": "Freight",
-            "dataType": "decimal",
+            "dataType": "double",
             "sourceColumn": "Freight",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
             "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
@@ -662,38 +696,369 @@
             "name": "DueDateKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "DueDateKey"
+            "sourceColumn": "DueDateKey",
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "type": "calculated",
             "name": "Profit",
-            "dataType": "decimal",
+            "dataType": "double",
             "isDataTypeInferred": true,
             "expression": "FactResellerSales[SalesAmount] - FactResellerSales[TotalProductCost]",
-            "formatString": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Colunas Mensuráveis",
+            "encodingHint": "value",
             "annotations": [
               {
                 "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1046\" DisplayName=\"R$ Portuguese (Brazil)\" Symbol=\"R$\" PositivePattern=\"2\" NegativePattern=\"9\" /></Format>"
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
               }
             ]
           }
         ],
         "partitions": [
           {
-            "name": "Partition",
-            "dataView": "full",
+            "name": "FACTRESELLERSALES_0000_2010",
             "source": {
               "type": "m",
               "expression": [
                 "let",
-                "    Source = #\"SQL/DW\",",
-                "    dbo_FactResellerSales = Source{[Schema=\"dbo\",Item=\"FactResellerSales\"]}[Data],",
-                "    #\"Removed Other Columns\" = Table.SelectColumns(dbo_FactResellerSales,{\"ProductKey\", \"OrderDateKey\", \"DueDateKey\", \"ShipDateKey\", \"ResellerKey\", \"EmployeeKey\", \"SalesOrderNumber\", \"SalesOrderLineNumber\", \"OrderQuantity\", \"UnitPrice\", \"ExtendedAmount\", \"UnitPriceDiscountPct\", \"DiscountAmount\", \"ProductStandardCost\", \"TotalProductCost\", \"SalesAmount\", \"TaxAmt\", \"Freight\"})",
+                "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                "\"select ",
+                "\tr.[ProductKey],",
+                "    r.[OrderDateKey],",
+                "    r.[DueDateKey],",
+                "    r.[ShipDateKey],",
+                "    r.[ResellerKey],",
+                "    r.[EmployeeKey],",
+                "    r.[SalesOrderNumber],",
+                "    r.[SalesOrderLineNumber],",
+                "    r.[OrderQuantity],",
+                "    r.[UnitPrice],",
+                "    r.[ExtendedAmount],",
+                "    r.[UnitPriceDiscountPct],",
+                "    r.[DiscountAmount],",
+                "    r.[ProductStandardCost],",
+                "    r.[TotalProductCost],",
+                "    r.[SalesAmount],",
+                "    r.[TaxAmt],",
+                "    r.[Freight]",
+                "from [dbo].[FactResellerSales] as r",
+                "where [OrderDateKey] <= 20101231\")",
                 "in",
-                "    #\"Removed Other Columns\""
+                "    Source"
               ]
-            }
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>let",
+                  "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                  "\"select ",
+                  "\tr.[ProductKey],",
+                  "    r.[OrderDateKey],",
+                  "    r.[DueDateKey],",
+                  "    r.[ShipDateKey],",
+                  "    r.[ResellerKey],",
+                  "    r.[EmployeeKey],",
+                  "    r.[SalesOrderNumber],",
+                  "    r.[SalesOrderLineNumber],",
+                  "    r.[OrderQuantity],",
+                  "    r.[UnitPrice],",
+                  "    r.[ExtendedAmount],",
+                  "    r.[UnitPriceDiscountPct],",
+                  "    r.[DiscountAmount],",
+                  "    r.[ProductStandardCost],",
+                  "    r.[TotalProductCost],",
+                  "    r.[SalesAmount],",
+                  "    r.[TaxAmt],",
+                  "    r.[Freight]",
+                  "from [dbo].[FactResellerSales] as r\")",
+                  "in",
+                  "    Source</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FACTRESELLERSALES_2011_2012",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                "\"",
+                "select ",
+                "\tr.[ProductKey],",
+                "    r.[OrderDateKey],",
+                "    r.[DueDateKey],",
+                "    r.[ShipDateKey],",
+                "    r.[ResellerKey],",
+                "    r.[EmployeeKey],",
+                "    r.[SalesOrderNumber],",
+                "    r.[SalesOrderLineNumber],",
+                "    r.[OrderQuantity],",
+                "    r.[UnitPrice],",
+                "    r.[ExtendedAmount],",
+                "    r.[UnitPriceDiscountPct],",
+                "    r.[DiscountAmount],",
+                "    r.[ProductStandardCost],",
+                "    r.[TotalProductCost],",
+                "    r.[SalesAmount],",
+                "    r.[TaxAmt],",
+                "    r.[Freight]",
+                "from [dbo].[FactResellerSales] as r",
+                "where [OrderDateKey] BETWEEN 20110101 AND 20121231",
+                "\")",
+                "in",
+                "    Source"
+              ]
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>let",
+                  "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                  "\"",
+                  "select ",
+                  "\tr.[ProductKey],",
+                  "    r.[OrderDateKey],",
+                  "    r.[DueDateKey],",
+                  "    r.[ShipDateKey],",
+                  "    r.[ResellerKey],",
+                  "    r.[EmployeeKey],",
+                  "    r.[SalesOrderNumber],",
+                  "    r.[SalesOrderLineNumber],",
+                  "    r.[OrderQuantity],",
+                  "    r.[UnitPrice],",
+                  "    r.[ExtendedAmount],",
+                  "    r.[UnitPriceDiscountPct],",
+                  "    r.[DiscountAmount],",
+                  "    r.[ProductStandardCost],",
+                  "    r.[TotalProductCost],",
+                  "    r.[SalesAmount],",
+                  "    r.[TaxAmt],",
+                  "    r.[Freight]",
+                  "from [dbo].[FactResellerSales] as r",
+                  "where [OrderDateKey] BETWEEN 20110101 AND 20121231",
+                  "\")",
+                  "in",
+                  "    Source</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FACTRESELLERSALES_2020",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                "\"",
+                "select ",
+                "\tr.[ProductKey],",
+                "    r.[OrderDateKey],",
+                "    r.[DueDateKey],",
+                "    r.[ShipDateKey],",
+                "    r.[ResellerKey],",
+                "    r.[EmployeeKey],",
+                "    r.[SalesOrderNumber],",
+                "    r.[SalesOrderLineNumber],",
+                "    r.[OrderQuantity],",
+                "    r.[UnitPrice],",
+                "    r.[ExtendedAmount],",
+                "    r.[UnitPriceDiscountPct],",
+                "    r.[DiscountAmount],",
+                "    r.[ProductStandardCost],",
+                "    r.[TotalProductCost],",
+                "    r.[SalesAmount],",
+                "    r.[TaxAmt],",
+                "    r.[Freight]",
+                "from [dbo].[FactResellerSales] as r",
+                "where [OrderDateKey] BETWEEN 20200101 AND 20201231",
+                "\")",
+                "in",
+                "    Source"
+              ]
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>let",
+                  "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                  "\"",
+                  "select ",
+                  "\tr.[ProductKey],",
+                  "    r.[OrderDateKey],",
+                  "    r.[DueDateKey],",
+                  "    r.[ShipDateKey],",
+                  "    r.[ResellerKey],",
+                  "    r.[EmployeeKey],",
+                  "    r.[SalesOrderNumber],",
+                  "    r.[SalesOrderLineNumber],",
+                  "    r.[OrderQuantity],",
+                  "    r.[UnitPrice],",
+                  "    r.[ExtendedAmount],",
+                  "    r.[UnitPriceDiscountPct],",
+                  "    r.[DiscountAmount],",
+                  "    r.[ProductStandardCost],",
+                  "    r.[TotalProductCost],",
+                  "    r.[SalesAmount],",
+                  "    r.[TaxAmt],",
+                  "    r.[Freight]",
+                  "from [dbo].[FactResellerSales] as r",
+                  "where [OrderDateKey] BETWEEN 20200101 AND 20201231",
+                  "\")",
+                  "in",
+                  "    Source</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FACTRESELLERSALES_2013",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                "\"",
+                "select ",
+                "\tr.[ProductKey],",
+                "    r.[OrderDateKey],",
+                "    r.[DueDateKey],",
+                "    r.[ShipDateKey],",
+                "    r.[ResellerKey],",
+                "    r.[EmployeeKey],",
+                "    r.[SalesOrderNumber],",
+                "    r.[SalesOrderLineNumber],",
+                "    r.[OrderQuantity],",
+                "    r.[UnitPrice],",
+                "    r.[ExtendedAmount],",
+                "    r.[UnitPriceDiscountPct],",
+                "    r.[DiscountAmount],",
+                "    r.[ProductStandardCost],",
+                "    r.[TotalProductCost],",
+                "    r.[SalesAmount],",
+                "    r.[TaxAmt],",
+                "    r.[Freight]",
+                "from [dbo].[FactResellerSales] as r",
+                "where [OrderDateKey] BETWEEN 20130101 AND 20131231",
+                "\")",
+                "in",
+                "    Source"
+              ]
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>let",
+                  "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                  "\"",
+                  "select ",
+                  "\tr.[ProductKey],",
+                  "    r.[OrderDateKey],",
+                  "    r.[DueDateKey],",
+                  "    r.[ShipDateKey],",
+                  "    r.[ResellerKey],",
+                  "    r.[EmployeeKey],",
+                  "    r.[SalesOrderNumber],",
+                  "    r.[SalesOrderLineNumber],",
+                  "    r.[OrderQuantity],",
+                  "    r.[UnitPrice],",
+                  "    r.[ExtendedAmount],",
+                  "    r.[UnitPriceDiscountPct],",
+                  "    r.[DiscountAmount],",
+                  "    r.[ProductStandardCost],",
+                  "    r.[TotalProductCost],",
+                  "    r.[SalesAmount],",
+                  "    r.[TaxAmt],",
+                  "    r.[Freight]",
+                  "from [dbo].[FactResellerSales] as r",
+                  "where [OrderDateKey] BETWEEN 20130101 AND 20131231",
+                  "\")",
+                  "in",
+                  "    Source</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FACTRESELLERSALES_HOT",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                "\"",
+                "select ",
+                "\tr.[ProductKey],",
+                "    r.[OrderDateKey],",
+                "    r.[DueDateKey],",
+                "    r.[ShipDateKey],",
+                "    r.[ResellerKey],",
+                "    r.[EmployeeKey],",
+                "    r.[SalesOrderNumber],",
+                "    r.[SalesOrderLineNumber],",
+                "    r.[OrderQuantity],",
+                "    r.[UnitPrice],",
+                "    r.[ExtendedAmount],",
+                "    r.[UnitPriceDiscountPct],",
+                "    r.[DiscountAmount],",
+                "    r.[ProductStandardCost],",
+                "    r.[TotalProductCost],",
+                "    r.[SalesAmount],",
+                "    r.[TaxAmt],",
+                "    r.[Freight]",
+                "from [dbo].[FactResellerSales_load] as r",
+                "\")",
+                "in",
+                "    Source"
+              ]
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>let",
+                  "    Source = Value.NativeQuery(#\"SQL/DW\", ",
+                  "\"",
+                  "select ",
+                  "\tr.[ProductKey],",
+                  "    r.[OrderDateKey],",
+                  "    r.[DueDateKey],",
+                  "    r.[ShipDateKey],",
+                  "    r.[ResellerKey],",
+                  "    r.[EmployeeKey],",
+                  "    r.[SalesOrderNumber],",
+                  "    r.[SalesOrderLineNumber],",
+                  "    r.[OrderQuantity],",
+                  "    r.[UnitPrice],",
+                  "    r.[ExtendedAmount],",
+                  "    r.[UnitPriceDiscountPct],",
+                  "    r.[DiscountAmount],",
+                  "    r.[ProductStandardCost],",
+                  "    r.[TotalProductCost],",
+                  "    r.[SalesAmount],",
+                  "    r.[TaxAmt],",
+                  "    r.[Freight]",
+                  "from [dbo].[FactResellerSales_load] as r",
+                  "\")",
+                  "in",
+                  "    Source</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
           }
         ],
         "measures": [
@@ -701,9 +1066,9 @@
             "name": "Lojas Vendas - Total Vendido",
             "expression": "SUM([SalesAmount])",
             "formatString": "\\$#,0;(\\$#,0);\\$#,0",
-            "displayFolder": "Indicadores",
+            "displayFolder": "KPI",
             "kpi": {
-              "targetExpression": "'FactResellerSales'[Lojas Vendas - Total Vendido Meta]",
+              "targetExpression": "'FactResellerSales'[Lojas Vendas - Faturamento Total Meta]",
               "targetFormatString": "\\$#,0;(\\$#,0);\\$#,0",
               "statusGraphic": "Traffic Light - Single",
               "statusExpression": [
@@ -808,9 +1173,11 @@
             "displayFolder": "Indicadores"
           },
           {
-            "name": "Lojas Vendas - Total Vendido Meta",
+            "name": "Lojas Vendas - Faturamento Total Meta",
+            "description": "Meta total de vendas dos vendedores",
             "expression": "SUM(FactSalesQuota[SalesAmountQuota])",
             "formatString": "\\$#,0;(\\$#,0);\\$#,0",
+            "isHidden": true,
             "displayFolder": "Indicadores",
             "annotations": [
               {
@@ -820,17 +1187,18 @@
             ]
           },
           {
-            "name": "Lojas Vendas - Total Lucro",
+            "name": "Lojas Vendas - Lucro Total",
             "expression": "SUM([Profit])",
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "KPI",
             "kpi": {
               "targetExpression": "'FactResellerSales'[Lojas Vendas - Total Lucro Meta]",
               "targetFormatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
-              "statusGraphic": "Three Symbols UnCircled Colored",
+              "statusGraphic": "Traffic Light - Single",
               "statusExpression": [
-                "var x='FactResellerSales'[Lojas Vendas - Total Lucro]/'FactResellerSales'[_Lojas Vendas - Total Lucro Goal] return",
+                "var x='FactResellerSales'[Lojas Vendas - Lucro Total]/'FactResellerSales'[_Lojas Vendas - Lucro Total Goal] return",
                 "            if(ISBLANK(x),BLANK(),",
-                "                    If(x<0.85,-1,",
+                "                    If(x<0.8,-1,",
                 "\t                If(x<1,0,1)",
                 "                )",
                 "            )",
@@ -859,7 +1227,7 @@
                 },
                 {
                   "name": "KpiThreshold_0",
-                  "value": "85"
+                  "value": "80"
                 },
                 {
                   "name": "KpiThreshold_1",
@@ -870,17 +1238,18 @@
             "annotations": [
               {
                 "name": "Format",
-                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
               }
             ]
           },
           {
-            "name": "Lojas Vendas - Total Lucro (Ano Anterior)",
+            "name": "Lojas Vendas - Lucro Total (Ano Anterior)",
             "expression": [
               "",
-              "CALCULATE([Lojas Vendas - Total Lucro],DATEADD(DimDate[Date],-1,YEAR))"
+              "CALCULATE([Lojas Vendas - Lucro Total],DATEADD(DimDate[Date],-1,YEAR))"
             ],
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Indicadores",
             "annotations": [
               {
                 "name": "Format",
@@ -892,9 +1261,10 @@
             "name": "Lojas Vendas - Total Lucro Meta",
             "expression": [
               "",
-              "IF([Lojas Vendas - Total Lucro (Ano Anterior)]<0,0,[Lojas Vendas - Total Lucro (Ano Anterior)]*1.05)"
+              "IF([Lojas Vendas - Lucro Total (Ano Anterior)]<0,0,[Lojas Vendas - Lucro Total (Ano Anterior)] * 1.05)"
             ],
             "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Indicadores",
             "annotations": [
               {
                 "name": "Format",
@@ -1059,105 +1429,124 @@
             "name": "ProductKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "ProductKey"
+            "sourceColumn": "ProductKey",
+            "encodingHint": "hash"
           },
           {
             "name": "OrderDateKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "OrderDateKey"
+            "sourceColumn": "OrderDateKey",
+            "encodingHint": "hash"
           },
           {
             "name": "DueDateKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "DueDateKey"
+            "sourceColumn": "DueDateKey",
+            "encodingHint": "hash"
           },
           {
             "name": "ShipDateKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "ShipDateKey"
+            "sourceColumn": "ShipDateKey",
+            "encodingHint": "hash"
           },
           {
             "name": "CustomerKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "CustomerKey"
+            "sourceColumn": "CustomerKey",
+            "encodingHint": "hash"
           },
           {
             "name": "PromotionKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "PromotionKey"
+            "sourceColumn": "PromotionKey",
+            "encodingHint": "hash"
           },
           {
             "name": "CurrencyKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "CurrencyKey"
+            "sourceColumn": "CurrencyKey",
+            "encodingHint": "hash"
           },
           {
             "name": "SalesTerritoryKey",
             "dataType": "int64",
             "isHidden": true,
-            "sourceColumn": "SalesTerritoryKey"
+            "sourceColumn": "SalesTerritoryKey",
+            "encodingHint": "hash"
           },
           {
             "name": "SalesOrderNumber",
             "dataType": "string",
-            "sourceColumn": "SalesOrderNumber"
+            "sourceColumn": "SalesOrderNumber",
+            "encodingHint": "hash"
           },
           {
             "name": "SalesOrderLineNumber",
             "dataType": "int64",
-            "sourceColumn": "SalesOrderLineNumber"
+            "sourceColumn": "SalesOrderLineNumber",
+            "encodingHint": "value"
           },
           {
             "name": "OrderQuantity",
             "dataType": "int64",
-            "sourceColumn": "OrderQuantity"
+            "sourceColumn": "OrderQuantity",
+            "encodingHint": "value"
           },
           {
             "name": "UnitPrice",
             "dataType": "decimal",
-            "sourceColumn": "UnitPrice"
+            "sourceColumn": "UnitPrice",
+            "encodingHint": "value"
           },
           {
             "name": "ExtendedAmount",
             "dataType": "decimal",
-            "sourceColumn": "ExtendedAmount"
+            "sourceColumn": "ExtendedAmount",
+            "encodingHint": "value"
           },
           {
             "name": "DiscountAmount",
             "dataType": "double",
             "isHidden": true,
-            "sourceColumn": "DiscountAmount"
+            "sourceColumn": "DiscountAmount",
+            "encodingHint": "value"
           },
           {
             "name": "ProductStandardCost",
             "dataType": "decimal",
-            "sourceColumn": "ProductStandardCost"
+            "sourceColumn": "ProductStandardCost",
+            "encodingHint": "value"
           },
           {
             "name": "TotalProductCost",
             "dataType": "decimal",
-            "sourceColumn": "TotalProductCost"
+            "sourceColumn": "TotalProductCost",
+            "encodingHint": "value"
           },
           {
             "name": "SalesAmount",
             "dataType": "decimal",
-            "sourceColumn": "SalesAmount"
+            "sourceColumn": "SalesAmount",
+            "encodingHint": "value"
           },
           {
             "name": "TaxAmt",
             "dataType": "decimal",
-            "sourceColumn": "TaxAmt"
+            "sourceColumn": "TaxAmt",
+            "encodingHint": "value"
           },
           {
             "name": "Freight",
             "dataType": "decimal",
-            "sourceColumn": "Freight"
+            "sourceColumn": "Freight",
+            "encodingHint": "value"
           }
         ],
         "partitions": [
@@ -1291,14 +1680,16 @@
             "dataType": "int64",
             "isHidden": true,
             "sourceColumn": "CustomerKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "CustomerAlternateKey",
             "dataType": "string",
             "isHidden": true,
             "sourceColumn": "CustomerAlternateKey",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "hash"
           },
           {
             "name": "MaritalStatus",
@@ -1318,6 +1709,7 @@
             "sourceColumn": "YearlyIncome",
             "formatString": "#,0 \"USD\";-#,0 \"USD\";#,0 \"USD\"",
             "displayFolder": "Colunas",
+            "encodingHint": "value",
             "summarizeBy": "average",
             "annotations": [
               {
@@ -1330,13 +1722,15 @@
             "name": "TotalChildren",
             "dataType": "int64",
             "sourceColumn": "TotalChildren",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "value"
           },
           {
             "name": "NumberChildrenAtHome",
             "dataType": "int64",
             "sourceColumn": "NumberChildrenAtHome",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "value"
           },
           {
             "name": "EnglishEducation",
@@ -1360,7 +1754,8 @@
             "name": "NumberCarsOwned",
             "dataType": "int64",
             "sourceColumn": "NumberCarsOwned",
-            "displayFolder": "Colunas"
+            "displayFolder": "Colunas",
+            "encodingHint": "value"
           },
           {
             "name": "CommuteDistance",
@@ -1389,6 +1784,7 @@
             "dataType": "int64",
             "sourceColumn": "Age",
             "displayFolder": "Colunas",
+            "encodingHint": "value",
             "summarizeBy": "average"
           },
           {
@@ -1480,23 +1876,21 @@
       },
       {
         "name": "FactSalesQuota",
+        "isHidden": true,
         "columns": [
           {
             "name": "SalesQuotaKey",
             "dataType": "int64",
-            "isHidden": true,
             "sourceColumn": "SalesQuotaKey"
           },
           {
             "name": "EmployeeKey",
             "dataType": "int64",
-            "isHidden": true,
             "sourceColumn": "EmployeeKey"
           },
           {
             "name": "DateKey",
             "dataType": "int64",
-            "isHidden": true,
             "sourceColumn": "DateKey"
           },
           {
@@ -1612,14 +2006,14 @@
         "isActive": false
       },
       {
-        "name": "647c4cfb-7861-4cfa-8a9d-5d2f3c7a40b4",
+        "name": "866e1916-d09c-4e59-b659-6da7222a7311",
         "fromTable": "FactSalesQuota",
         "fromColumn": "EmployeeKey",
         "toTable": "DimEmployee",
         "toColumn": "EmployeeKey"
       },
       {
-        "name": "3d28550e-9a9b-4f1c-ad8f-3784c78fa48b",
+        "name": "367e100f-084c-494e-9440-c6877462296c",
         "fromTable": "FactSalesQuota",
         "fromColumn": "DateKey",
         "toTable": "DimDate",
@@ -2060,7 +2454,7 @@
                 "name": "Lojas Vendas - Total Items"
               },
               {
-                "name": "Lojas Vendas - Total Vendido Meta"
+                "name": "Lojas Vendas - Faturamento Total Meta"
               },
               {
                 "name": "Lojas Vendas - Total Vendido"
@@ -2144,6 +2538,64 @@
               },
               {
                 "name": "SalesAmountQuota"
+              }
+            ]
+          },
+          {
+            "name": "DimEmployee",
+            "columns": [
+              {
+                "name": "Department_Level1"
+              },
+              {
+                "name": "Department_Level2"
+              },
+              {
+                "name": "Department_Level3"
+              },
+              {
+                "name": "Department_Level4"
+              },
+              {
+                "name": "DepartmentName"
+              },
+              {
+                "name": "Employee"
+              },
+              {
+                "name": "EmployeeKey"
+              },
+              {
+                "name": "EmployeeNationalIDAlternateKey"
+              },
+              {
+                "name": "HierarquiaCaminho"
+              },
+              {
+                "name": "Level1"
+              },
+              {
+                "name": "Level2"
+              },
+              {
+                "name": "Level3"
+              },
+              {
+                "name": "Level4"
+              },
+              {
+                "name": "ParentEmployeeKey"
+              },
+              {
+                "name": "ParentEmployeeNationalIDAlternateKey"
+              }
+            ],
+            "hierarchies": [
+              {
+                "name": "Departments"
+              },
+              {
+                "name": "Organization"
               }
             ]
           }

@@ -1,0 +1,66 @@
+﻿/* Exemplo 01 - Sumarização da tabela Reseller Sales */
+EVALUATE
+SUMMARIZE(FactResellerSales,
+	FactResellerSales[OrderDateKey],
+	FactResellerSales[ProductKey],
+	"Origem", {"Lojas"},
+	//FactResellerSales[ResellerKey],
+	"Faturamento",sum(FactResellerSales[SalesAmount]),
+	"Impostos",sum(FactResellerSales[TaxAmt]),
+	"Custos",sum(FactResellerSales[TotalProductCost]),
+	"Frete",sum(FactResellerSales[Freight]),
+	"QtdVendas",COUNTROWS(FactResellerSales));
+
+
+/* Exemplo 02 - Sumarização da tabela Reseller Sales + Internet Sales*/
+EVALUATE
+VAR tLojas = 
+	SUMMARIZE(FactResellerSales;
+		FactResellerSales[OrderDateKey];
+		FactResellerSales[ProductKey];
+		"Origem"; {"Lojas"};
+		"Faturamento";sum(FactResellerSales[SalesAmount]);
+		"Impostos";sum(FactResellerSales[TaxAmt]);
+		"Custos";sum(FactResellerSales[TotalProductCost]);
+		"Frete";sum(FactResellerSales[Freight]);
+		"QtdVendas";COUNTROWS(FactResellerSales))
+VAR tInternet = 
+	SUMMARIZE(FactInternetSales;
+		FactInternetSales[OrderDateKey];
+		FactInternetSales[ProductKey];
+		"Origem"; {"Internet"};
+		"Faturamento";sum(FactInternetSales[SalesAmount]);
+		"Impostos";sum(FactInternetSales[TaxAmt]);
+		"Custos";sum(FactInternetSales[TotalProductCost]);
+		"Frete";sum(FactInternetSales[Freight]);
+		"QtdVendas";COUNTROWS(FactInternetSales))
+RETURN UNION(tLojas; tInternet)		
+
+
+
+
+/* Exemplo 03 - Query para o detalhamento */
+
+EVALUATE
+SELECTCOLUMNS(
+	FactInternetSales,
+		"Sales Order Number", FactInternetSales[SalesOrderNumber],
+		"Cliente", RELATED(DimCustomer[CustomerName]),
+		"Cidade", RELATED(DimCustomer[GeoCity]),
+		"Data Venda", RELATED(DimDate[Date]),
+		"Faturamento", FactInternetSales[SalesAmount]
+	)
+
+
+EVALUATE
+DETAILROWS([Internet Vendas - Faturamento Total])
+
+
+EVALUATE
+SELECTCOLUMNS(
+	FactInternetSales,
+	"Produto", RELATED(DimProduct[ProductName]),
+	"Categoria", RELATED(DimProduct[ProductCategory]),
+	"Quantidade", [Internet Vendas - Quantidade Total],
+	"Faturamento Total", [Internet Vendas - Faturamento Total])
+
