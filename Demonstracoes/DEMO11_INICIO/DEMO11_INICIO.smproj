@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Development</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2e16d309-881e-4893-8736-0b5cfbf364de}</ProjectGuid>
+    <ProjectGuid>{ba4b957f-4f05-442e-a969-18906bf5066a}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MyRootNamespace</RootNamespace>
     <AssemblyName>MyAssemblyName</AssemblyName>
@@ -27,7 +27,7 @@
     <DeploymentServerName>DESKTOP-5ULL8UQ</DeploymentServerName>
     <DeploymentServerEdition>Developer</DeploymentServerEdition>
     <DeploymentServerVersion>Unknown</DeploymentServerVersion>
-    <DeploymentServerDatabase>DEMO09_FINAL</DeploymentServerDatabase>
+    <DeploymentServerDatabase>DEMO11_INICIO</DeploymentServerDatabase>
     <DeploymentServerCubeName>Model</DeploymentServerCubeName>
     <DeploymentOptionProcessing>Default</DeploymentOptionProcessing>
     <DeploymentOptionTransactionalDeployment>False</DeploymentOptionTransactionalDeployment>
@@ -36,7 +36,7 @@
     <DeploymentOptionQueryImpersonation>Default</DeploymentOptionQueryImpersonation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DEMO09_FINAL.bim">
+    <Compile Include="DEMO11_INICIO.bim">
       <SubType>Content</SubType>
     </Compile>
   </ItemGroup>

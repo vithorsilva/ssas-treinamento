@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Development</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{e61bfc95-8488-4130-8671-e5efc51d9697}</ProjectGuid>
+    <ProjectGuid>{ff7dff97-de0d-4ac3-b86e-a3dc89beb43c}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MyRootNamespace</RootNamespace>
     <AssemblyName>MyAssemblyName</AssemblyName>
@@ -12,11 +12,11 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Development' ">
     <OutputPath>bin\</OutputPath>
-    <DeploymentServerName>asazure://brazilsouth.asazure.windows.net/ssastreinamentovithor</DeploymentServerName>
+    <DeploymentServerName>localhost</DeploymentServerName>
     <DeploymentServerEdition>Developer</DeploymentServerEdition>
     <DeploymentServerVersion>Unknown</DeploymentServerVersion>
-    <DeploymentServerDatabase>IpirangaBI</DeploymentServerDatabase>
-    <DeploymentServerCubeName>Cubo</DeploymentServerCubeName>
+    <DeploymentServerDatabase>DEMO08_TESTE</DeploymentServerDatabase>
+    <DeploymentServerCubeName>Model</DeploymentServerCubeName>
     <DeploymentOptionProcessing>DoNotProcess</DeploymentOptionProcessing>
     <DeploymentOptionTransactionalDeployment>False</DeploymentOptionTransactionalDeployment>
     <DeploymentOptionADALCache>Default</DeploymentOptionADALCache>
@@ -27,7 +27,7 @@
     <DeploymentServerName>DESKTOP-5ULL8UQ</DeploymentServerName>
     <DeploymentServerEdition>Developer</DeploymentServerEdition>
     <DeploymentServerVersion>Unknown</DeploymentServerVersion>
-    <DeploymentServerDatabase>DEMO10_INICIO</DeploymentServerDatabase>
+    <DeploymentServerDatabase>DEMO11_FINAL</DeploymentServerDatabase>
     <DeploymentServerCubeName>Model</DeploymentServerCubeName>
     <DeploymentOptionProcessing>Default</DeploymentOptionProcessing>
     <DeploymentOptionTransactionalDeployment>False</DeploymentOptionTransactionalDeployment>
@@ -36,7 +36,7 @@
     <DeploymentOptionQueryImpersonation>Default</DeploymentOptionQueryImpersonation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DEMO10_INICIO.bim">
+    <Compile Include="DEMO11_FINAL.bim">
       <SubType>Content</SubType>
     </Compile>
   </ItemGroup>
