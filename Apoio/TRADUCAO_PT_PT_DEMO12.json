@@ -1,0 +1,1381 @@
+{
+  "referenceCulture": {
+  "name": "db",
+  "model": {
+    "tables": [
+      {
+        "name": "DimDate",
+        "columns": [
+          {
+            "name": "DateKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "DayNumberOfWeek",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "DayNameOfWeek",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "DayNumberOfMonth",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "MonthName",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "MonthNumberOfYear",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "CalendarQuarter",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "CalendarYear",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "FiscalQuarter",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "FiscalYear",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Date",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Period",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "PeriodNro",
+            "displayFolder": "Colunas"
+          }
+        ]
+      },
+      {
+        "name": "DimEmployee",
+        "columns": [
+          {
+            "name": "EmployeeKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "ParentEmployeeKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "EmployeeNationalIDAlternateKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "ParentEmployeeNationalIDAlternateKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "DepartmentName",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Employee",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "HierarquiaCaminho",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Level1",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Level2",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Level3",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Level4",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Department_Level1",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Department_Level2",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Department_Level3",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Department_Level4",
+            "displayFolder": "Colunas"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Organization",
+            "displayFolder": "Hierarquias",
+            "levels": [
+              {
+                "name": "Level1"
+              },
+              {
+                "name": "Level2"
+              },
+              {
+                "name": "Level3"
+              },
+              {
+                "name": "Level4"
+              }
+            ]
+          },
+          {
+            "name": "Departments",
+            "displayFolder": "Hierarquias",
+            "levels": [
+              {
+                "name": "Department_L1"
+              },
+              {
+                "name": "Department_L2"
+              },
+              {
+                "name": "Department_L3"
+              },
+              {
+                "name": "Department_L4"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DimGeography",
+        "columns": [
+          {
+            "name": "GeographyKey"
+          },
+          {
+            "name": "City"
+          },
+          {
+            "name": "StateProvinceCode"
+          },
+          {
+            "name": "StateProvinceName"
+          },
+          {
+            "name": "CountryRegionCode"
+          },
+          {
+            "name": "Country"
+          },
+          {
+            "name": "PostalCode"
+          },
+          {
+            "name": "SalesTerritoryKey"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Location",
+            "levels": [
+              {
+                "name": "Country"
+              },
+              {
+                "name": "State"
+              },
+              {
+                "name": "City"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DimReseller",
+        "columns": [
+          {
+            "name": "ResellerKey"
+          },
+          {
+            "name": "GeographyKey"
+          },
+          {
+            "name": "ResellerAlternateKey"
+          },
+          {
+            "name": "Phone"
+          },
+          {
+            "name": "BusinessType"
+          },
+          {
+            "name": "ResellerName"
+          },
+          {
+            "name": "NumberEmployees"
+          },
+          {
+            "name": "AddressLine1"
+          }
+        ]
+      },
+      {
+        "name": "FactResellerSales",
+        "columns": [
+          {
+            "name": "ProductKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "OrderDateKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "ShipDateKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "ResellerKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "EmployeeKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "SalesOrderNumber",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "SalesOrderLineNumber",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "OrderQuantity",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "UnitPrice",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "ExtendedAmount",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "UnitPriceDiscountPct",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "DiscountAmount",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "ProductStandardCost",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "TotalProductCost",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "SalesAmount",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "TaxAmt",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "Freight",
+            "displayFolder": "Colunas Mensuráveis"
+          },
+          {
+            "name": "DueDateKey",
+            "displayFolder": "Colunas"
+          },
+          {
+            "name": "Profit",
+            "displayFolder": "Colunas Mensuráveis"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Reseller Sales - Amount",
+            "displayFolder": "KPI",
+            "kpi": {}
+          },
+          {
+            "name": "Reseller Sales - Average Cost",
+            "displayFolder": "Indicadores"
+          },
+          {
+            "name": "Reseller Sales - Costs",
+            "displayFolder": "Indicadores"
+          },
+          {
+            "name": "Reseller Sales - Taxes",
+            "displayFolder": "Indicadores"
+          },
+          {
+            "name": "Reseller Sales - Freight",
+            "displayFolder": "Indicadores"
+          },
+          {
+            "name": "Reseller Sales - Quantity",
+            "displayFolder": "Indicadores"
+          },
+          {
+            "name": "Reseller Sales - Sales Target",
+            "description": "Meta total de vendas dos vendedores",
+            "displayFolder": "Indicadores"
+          },
+          {
+            "name": "Reseller Sales - Profit",
+            "displayFolder": "KPI",
+            "kpi": {}
+          },
+          {
+            "name": "Reseller Sales - Profit (PY)",
+            "displayFolder": "Indicadores"
+          },
+          {
+            "name": "Reseller Sales - Profit Target",
+            "displayFolder": "Indicadores"
+          }
+        ]
+      },
+      {
+        "name": "DimProduct",
+        "columns": [
+          {
+            "name": "ProductKey"
+          },
+          {
+            "name": "ProductAlternateKey"
+          },
+          {
+            "name": "ProductName"
+          },
+          {
+            "name": "StandardCost"
+          },
+          {
+            "name": "Color"
+          },
+          {
+            "name": "ListPrice"
+          },
+          {
+            "name": "Size"
+          },
+          {
+            "name": "SizeRange"
+          },
+          {
+            "name": "Weight"
+          },
+          {
+            "name": "ProductLine"
+          },
+          {
+            "name": "Class"
+          },
+          {
+            "name": "Style"
+          },
+          {
+            "name": "ModelName"
+          },
+          {
+            "name": "ProductDescription"
+          },
+          {
+            "name": "ProductSubCategory"
+          },
+          {
+            "name": "ProductCategory"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Categoria-SubCategoria-Produtos Hierarquia",
+            "levels": [
+              {
+                "name": "Categoria"
+              },
+              {
+                "name": "SubCategoria"
+              },
+              {
+                "name": "Produto"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DimSalesTerritory",
+        "columns": [
+          {
+            "name": "SalesTerritoryKey"
+          },
+          {
+            "name": "SalesTerritoryAlternateKey"
+          },
+          {
+            "name": "SalesTerritoryRegion"
+          },
+          {
+            "name": "SalesTerritoryCountry"
+          },
+          {
+            "name": "SalesTerritoryGroup"
+          }
+        ]
+      },
+      {
+        "name": "FactSalesQuota",
+        "columns": [
+          {
+            "name": "SalesQuotaKey"
+          },
+          {
+            "name": "EmployeeKey"
+          },
+          {
+            "name": "DateKey"
+          },
+          {
+            "name": "SalesAmountQuota"
+          }
+        ]
+      },
+      {
+        "name": "DimShipDate",
+        "columns": [
+          {
+            "name": "ShipDateKey"
+          },
+          {
+            "name": "DayNumberOfWeek"
+          },
+          {
+            "name": "DayNameOfWeek"
+          },
+          {
+            "name": "DayNumberOfMonth"
+          },
+          {
+            "name": "MonthName"
+          },
+          {
+            "name": "MonthNumberOfYear"
+          },
+          {
+            "name": "CalendarQuarter"
+          },
+          {
+            "name": "CalendarYear"
+          },
+          {
+            "name": "FiscalQuarter"
+          },
+          {
+            "name": "FiscalYear"
+          },
+          {
+            "name": "Shipdate"
+          },
+          {
+            "name": "Period"
+          },
+          {
+            "name": "PeriodNro"
+          }
+        ]
+      },
+      {
+        "name": "Temporal",
+        "columns": [
+          {
+            "name": "Tempo"
+          },
+          {
+            "name": "Ordem"
+          }
+        ]
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "Vendas Internet"
+      },
+      {
+        "name": "Vendas Lojas"
+      },
+      {
+        "name": "Vendedores"
+      }
+    ],
+    "roles": [
+      {
+        "name": "Vendas Sumarizado"
+      }
+    ]
+  }
+},
+  "cultures": [
+    {
+  "name": "pt-PT",
+  "translations": {
+    "model": {
+      "name": "Model",
+      "translatedCaption": "",
+      "translatedDescription": "",
+      "tables": [
+        {
+          "name": "DimDate",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "DateKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "DayNumberOfWeek",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "DayNameOfWeek",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "DayNumberOfMonth",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "MonthName",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "MonthNumberOfYear",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "CalendarQuarter",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "CalendarYear",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "FiscalQuarter",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "FiscalYear",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Date",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Period",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "PeriodNro",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            }
+          ]
+        },
+        {
+          "name": "DimEmployee",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "EmployeeKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "ParentEmployeeKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "EmployeeNationalIDAlternateKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "ParentEmployeeNationalIDAlternateKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "DepartmentName",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Employee",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "HierarquiaCaminho",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Level1",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Level2",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Level3",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Level4",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Department_Level1",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Department_Level2",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Department_Level3",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Department_Level4",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            }
+          ],
+          "hierarchies": [
+            {
+              "name": "Organization",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": "",
+              "levels": [
+                {
+                  "name": "Level1",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "Level2",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "Level3",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "Level4",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                }
+              ]
+            },
+            {
+              "name": "Departments",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": "",
+              "levels": [
+                {
+                  "name": "Department_L1",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "Department_L2",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "Department_L3",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "Department_L4",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DimGeography",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "GeographyKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "City",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "StateProvinceCode",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "StateProvinceName",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "CountryRegionCode",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Country",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "PostalCode",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "SalesTerritoryKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            }
+          ],
+          "hierarchies": [
+            {
+              "name": "Location",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "levels": [
+                {
+                  "name": "Country",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "State",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "City",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DimReseller",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "ResellerKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "GeographyKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ResellerAlternateKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Phone",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "BusinessType",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ResellerName",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "NumberEmployees",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "AddressLine1",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "FactResellerSales",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "ProductKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "OrderDateKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "ShipDateKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "ResellerKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "EmployeeKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "SalesOrderNumber",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "SalesOrderLineNumber",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "OrderQuantity",
+              "translatedCaption": "OrdemQuantidade",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "UnitPrice",
+              "translatedCaption": "PrecoUnitario",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "ExtendedAmount",
+              "translatedCaption": "QuantidadeExtendida",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "UnitPriceDiscountPct",
+              "translatedCaption": "PrecoUnitarioDescontoPCT",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "DiscountAmount",
+              "translatedCaption": "DescontoTotal",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "ProductStandardCost",
+              "translatedCaption": "CustoProducaoPadrao",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "TotalProductCost",
+              "translatedCaption": "CustoProducaoTotal",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "SalesAmount",
+              "translatedCaption": "TotalVendido",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "TaxAmt",
+              "translatedCaption": "Impostos",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Freight",
+              "translatedCaption": "Frete",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "DueDateKey",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Profit",
+              "translatedCaption": "Lucro",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            }
+          ],
+          "measures": [
+            {
+              "name": "Reseller Sales - Amount",
+              "translatedCaption": "Revendedores - Faturamento",
+              "translatedDisplayFolder": "",
+              "kpi": {
+                "translatedDescription": ""
+              }
+            },
+            {
+              "name": "Reseller Sales - Average Cost",
+              "translatedCaption": "Revendedores - Custo Médio",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Reseller Sales - Costs",
+              "translatedCaption": "Revendedores - Custos",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Reseller Sales - Taxes",
+              "translatedCaption": "Revendedores - Impostos",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Reseller Sales - Freight",
+              "translatedCaption": "Revendedores - Frete",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Reseller Sales - Quantity",
+              "translatedCaption": "Revendedores - Quantidade",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Reseller Sales - Sales Target",
+              "translatedCaption": "Revendedores - Faturamento Meta",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Reseller Sales - Profit",
+              "translatedCaption": "Revendedores - Lucro",
+              "translatedDisplayFolder": "",
+              "kpi": {
+                "translatedDescription": ""
+              }
+            },
+            {
+              "name": "Reseller Sales - Profit (PY)",
+              "translatedCaption": "Revendedores - Lucro Anterior",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            },
+            {
+              "name": "Reseller Sales - Profit Target",
+              "translatedCaption": "Revendedores - Lucro Meta",
+              "translatedDescription": "",
+              "translatedDisplayFolder": ""
+            }
+          ]
+        },
+        {
+          "name": "DimProduct",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "ProductKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ProductAlternateKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ProductName",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "StandardCost",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Color",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ListPrice",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Size",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "SizeRange",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Weight",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ProductLine",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Class",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Style",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ModelName",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ProductDescription",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ProductSubCategory",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "ProductCategory",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            }
+          ],
+          "hierarchies": [
+            {
+              "name": "Categoria-SubCategoria-Produtos Hierarquia",
+              "translatedCaption": "",
+              "translatedDescription": "",
+              "levels": [
+                {
+                  "name": "Categoria",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "SubCategoria",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                },
+                {
+                  "name": "Produto",
+                  "translatedCaption": "",
+                  "translatedDescription": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DimSalesTerritory",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "SalesTerritoryKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "SalesTerritoryAlternateKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "SalesTerritoryRegion",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "SalesTerritoryCountry",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "SalesTerritoryGroup",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "FactSalesQuota",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "SalesQuotaKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "EmployeeKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "DateKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "SalesAmountQuota",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "DimShipDate",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "ShipDateKey",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "DayNumberOfWeek",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "DayNameOfWeek",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "DayNumberOfMonth",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "MonthName",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "MonthNumberOfYear",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "CalendarQuarter",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "CalendarYear",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "FiscalQuarter",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "FiscalYear",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Shipdate",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Period",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "PeriodNro",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            }
+          ]
+        },
+        {
+          "name": "Temporal",
+          "translatedCaption": "",
+          "translatedDescription": "",
+          "columns": [
+            {
+              "name": "Tempo",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            },
+            {
+              "name": "Ordem",
+              "translatedCaption": "",
+              "translatedDescription": ""
+            }
+          ]
+        }
+      ],
+      "perspectives": [
+        {
+          "name": "Vendas Internet",
+          "translatedCaption": "",
+          "translatedDescription": ""
+        },
+        {
+          "name": "Vendas Lojas",
+          "translatedCaption": "Revendedores",
+          "translatedDescription": ""
+        },
+        {
+          "name": "Vendedores",
+          "translatedCaption": "",
+          "translatedDescription": ""
+        }
+      ]
+    }
+  }
+}
+  ]
+}
