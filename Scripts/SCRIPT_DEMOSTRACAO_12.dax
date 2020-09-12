@@ -1,0 +1,33 @@
+﻿EVALUATE 
+	TOPN(20, FactResellerSales, FactResellerSales[UnitPrice], DESC)
+
+EVALUATE 
+	DISTINCT(FactResellerSales[UnitPrice])
+
+
+(FactResellerSales, FactResellerSales[UnitPrice])
+
+/* Caso 1 */
+EVALUATE
+	ROW("Custo Total Markup",
+		SUMX(FactResellerSales, 
+			IF(
+				FactResellerSales[UnitPrice] > 234,  
+				[Lojas Vendas - Custo Total] * 0.8, 
+				[Lojas Vendas - Custo Total] * 1.30)))
+
+/* Caso 2 */
+EVALUATE
+	ROW("Custo Total Markup",
+		SUMX(FactResellerSales, 
+			VAR vCusto = [Lojas Vendas - Custo Total]
+			RETURN IF(FactResellerSales[UnitPrice] > 234,  vCusto * 0.8, vCusto * 1.30)))
+			
+/* Caso 3 */		
+EVALUATE
+	ROW("Custo Total Markup",
+		CALCULATE([Lojas Vendas - Custo Total], FactResellerSales[UnitPrice] > 234) * 0.8
+		+ 
+		CALCULATE([Lojas Vendas - Custo Total], NOT(FactResellerSales[UnitPrice] > 234)) * 1.3
+		)
+		

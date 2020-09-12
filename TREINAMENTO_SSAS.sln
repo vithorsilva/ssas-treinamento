@@ -69,6 +69,8 @@ Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "DEMO11_FINAL", "Demonstraco
 EndProject
 Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "DEMO12_INICIO", "Demonstracoes\DEMO12_INICIO\DEMO12_INICIO.smproj", "{4C42B43B-ECA9-47E2-B47D-EA6926258326}"
 EndProject
+Project("{6870E480-7721-4708-BFB8-9AE898AA21B3}") = "DEMO12_FINAL", "Demonstracoes\DEMO12_FINAL\DEMO12_FINAL.smproj", "{3B97D68B-0C28-485A-9AA9-E5D6DBCA9EA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|x86 = Development|x86
@@ -149,6 +151,9 @@ Global
 		{4C42B43B-ECA9-47E2-B47D-EA6926258326}.Development|x86.ActiveCfg = Development|x86
 		{4C42B43B-ECA9-47E2-B47D-EA6926258326}.Development|x86.Build.0 = Development|x86
 		{4C42B43B-ECA9-47E2-B47D-EA6926258326}.Development|x86.Deploy.0 = Development|x86
+		{3B97D68B-0C28-485A-9AA9-E5D6DBCA9EA1}.Development|x86.ActiveCfg = Development|x86
+		{3B97D68B-0C28-485A-9AA9-E5D6DBCA9EA1}.Development|x86.Build.0 = Development|x86
+		{3B97D68B-0C28-485A-9AA9-E5D6DBCA9EA1}.Development|x86.Deploy.0 = Development|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -182,6 +187,7 @@ Global
 		{BA4B957F-4F05-442E-A969-18906BF5066A} = {7150C34E-37F7-49F8-92E6-36530D0E2C87}
 		{FF7DFF97-DE0D-4AC3-B86E-A3DC89BEB43C} = {54BF56F3-2444-435D-8B15-DAE167A32F3F}
 		{4C42B43B-ECA9-47E2-B47D-EA6926258326} = {7150C34E-37F7-49F8-92E6-36530D0E2C87}
+		{3B97D68B-0C28-485A-9AA9-E5D6DBCA9EA1} = {54BF56F3-2444-435D-8B15-DAE167A32F3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB1E2D02-D07F-4878-AE87-E6AADCE6B46A}

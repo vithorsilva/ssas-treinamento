@@ -1,0 +1,86 @@
+{
+  "FileFormatVersion": 1,
+  "StorageEngineDuration": 2,
+  "StorageEngineDurationPercentage": 0.0,
+  "FormulaEngineDuration": 5,
+  "FormulaEngineDurationPercentage": 0.0,
+  "StoreageEngineEvents": [
+    {
+      "Class": "VertiPaqSEQueryEnd",
+      "Subclass": "VertiPaqScanInternal",
+      "Query": "SET DC_KIND=\"DENSE\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[ProductStandardCost] ), COUNT (  )\r\nFROM 'FactResellerSales'\r\nWHERE\r\n\t'FactResellerSales'[ProductStandardCost] IS NOT NULL;\r\n",
+      "Duration": 1,
+      "CpuTime": 0,
+      "RowNumber": 1,
+      "EstimatedRows": null,
+      "EstimatedKBytes": null,
+      "HighlightQuery": false,
+      "QueryRichText": "SET DC_KIND=\"DENSE\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[ProductStandardCost] ), COUNT (  )\r\nFROM 'FactResellerSales'\r\nWHERE\r\n\t'FactResellerSales'[ProductStandardCost] IS NOT NULL;\r\n"
+    },
+    {
+      "Class": "VertiPaqSEQueryEnd",
+      "Subclass": "VertiPaqScan",
+      "Query": "SET DC_KIND=\"AUTO\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[ProductStandardCost] ), COUNT (  )\r\nFROM 'FactResellerSales'\r\nWHERE\r\n\t'FactResellerSales'[ProductStandardCost] IS NOT NULL;\r\n\r\n\r\n'Estimated size ( volume, marshalling bytes ) : 1, 16'\r\n",
+      "Duration": 1,
+      "CpuTime": 0,
+      "RowNumber": 2,
+      "EstimatedRows": 1,
+      "EstimatedKBytes": 1,
+      "HighlightQuery": false,
+      "QueryRichText": "SET DC_KIND=\"AUTO\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[ProductStandardCost] ), COUNT (  )\r\nFROM 'FactResellerSales'\r\nWHERE\r\n\t'FactResellerSales'[ProductStandardCost] IS NOT NULL;\r\n\r\n\r\n'Estimated size ( volume, marshalling bytes ) : 1, 16'\r\n"
+    },
+    {
+      "Class": "VertiPaqSEQueryEnd",
+      "Subclass": "VertiPaqScanInternal",
+      "Query": "SET DC_KIND=\"DENSE\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[TotalProductCost] ), COUNT () \r\nFROM 'FactResellerSales';\r\n",
+      "Duration": 0,
+      "CpuTime": 0,
+      "RowNumber": 3,
+      "EstimatedRows": null,
+      "EstimatedKBytes": null,
+      "HighlightQuery": false,
+      "QueryRichText": "SET DC_KIND=\"DENSE\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[TotalProductCost] ), COUNT () \r\nFROM 'FactResellerSales';\r\n"
+    },
+    {
+      "Class": "VertiPaqSEQueryEnd",
+      "Subclass": "VertiPaqScan",
+      "Query": "SET DC_KIND=\"AUTO\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[TotalProductCost] )\r\nFROM 'FactResellerSales';\r\n\r\n\r\n'Estimated size ( volume, marshalling bytes ) : 1, 16'\r\n",
+      "Duration": 1,
+      "CpuTime": 0,
+      "RowNumber": 4,
+      "EstimatedRows": 1,
+      "EstimatedKBytes": 1,
+      "HighlightQuery": false,
+      "QueryRichText": "SET DC_KIND=\"AUTO\";\r\nSELECT\r\nSUM ( 'FactResellerSales'[TotalProductCost] )\r\nFROM 'FactResellerSales';\r\n\r\n\r\n'Estimated size ( volume, marshalling bytes ) : 1, 16'\r\n"
+    },
+    {
+      "Class": "VertiPaqSEQueryEnd",
+      "Subclass": "VertiPaqScanInternal",
+      "Query": "SET DC_KIND=\"DENSE\";\r\nWITH\r\n\t$Expr0 := 'CallbackDataID ( Analise ) ' () \r\nSELECT\r\nSUM ( @$Expr0 ), COUNT () \r\nFROM 'FactResellerSales';\r\n",
+      "Duration": 0,
+      "CpuTime": 0,
+      "RowNumber": 5,
+      "EstimatedRows": null,
+      "EstimatedKBytes": null,
+      "HighlightQuery": true,
+      "QueryRichText": "SET DC_KIND=\"DENSE\";\r\nWITH\r\n\t$Expr0 := '|~S~|CallbackDataID|~E~| ( Analise ) ' () \r\nSELECT\r\nSUM ( @$Expr0 ), COUNT () \r\nFROM 'FactResellerSales';\r\n"
+    },
+    {
+      "Class": "VertiPaqSEQueryEnd",
+      "Subclass": "VertiPaqScan",
+      "Query": "SET DC_KIND=\"AUTO\";\r\nWITH\r\n\t$Expr0 := 'CallbackDataID ( Analise ) ' () \r\nSELECT\r\nSUM ( @$Expr0 )\r\nFROM 'FactResellerSales';\r\n\r\n\r\n'Estimated size ( volume, marshalling bytes ) : 1, 16'\r\n",
+      "Duration": 0,
+      "CpuTime": 0,
+      "RowNumber": 6,
+      "EstimatedRows": 1,
+      "EstimatedKBytes": 1,
+      "HighlightQuery": true,
+      "QueryRichText": "SET DC_KIND=\"AUTO\";\r\nWITH\r\n\t$Expr0 := '|~S~|CallbackDataID|~E~| ( Analise ) ' () \r\nSELECT\r\nSUM ( @$Expr0 )\r\nFROM 'FactResellerSales';\r\n\r\n\r\n'Estimated size ( volume, marshalling bytes ) : 1, 16'\r\n"
+    }
+  ],
+  "StorageEngineCpu": 0,
+  "TotalDuration": 7,
+  "StorageEngineQueryCount": 3,
+  "VertipaqCacheMatches": 0,
+  "TotalCpuDuration": 16
+}

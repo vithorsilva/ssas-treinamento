@@ -1,0 +1,682 @@
+{
+  "FileFormatVersion": 1,
+  "PhysicalQueryPlanRows": [
+    {
+      "Records": null,
+      "Operation": "AddColumns: IterPhyOp LogOp=AddColumns IterCols(0)(''[Custo Total Markup])",
+      "IndentedOperation": "AddColumns: IterPhyOp LogOp=AddColumns IterCols(0)(''[Custo Total Markup])",
+      "Level": 0,
+      "RowNumber": 1
+    },
+    {
+      "Records": null,
+      "Operation": "SingletonTable: IterPhyOp LogOp=AddColumns",
+      "IndentedOperation": "    SingletonTable: IterPhyOp LogOp=AddColumns",
+      "Level": 1,
+      "RowNumber": 2
+    },
+    {
+      "Records": 1,
+      "Operation": "SpoolLookup: LookupPhyOp LogOp=VarScope Double #Records=1 #KeyCols=158 #ValueCols=1 DominantValue=BLANK",
+      "IndentedOperation": "    SpoolLookup: LookupPhyOp LogOp=VarScope Double #Records=1 #KeyCols=158 #ValueCols=1 DominantValue=BLANK",
+      "Level": 1,
+      "RowNumber": 3
+    },
+    {
+      "Records": 1,
+      "Operation": "ProjectionSpool<ProjectFusion<Copy>>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "        ProjectionSpool<ProjectFusion<Copy>>: SpoolPhyOp #Records=1",
+      "Level": 2,
+      "RowNumber": 4
+    },
+    {
+      "Records": null,
+      "Operation": "Cache: IterPhyOp #FieldCols=0 #ValueCols=1",
+      "IndentedOperation": "            Cache: IterPhyOp #FieldCols=0 #ValueCols=1",
+      "Level": 3,
+      "RowNumber": 5
+    },
+    {
+      "Records": 1,
+      "Operation": "SpoolLookup: LookupPhyOp LogOp=ScalarVarProxy Double #Records=1 #KeyCols=0 #ValueCols=1 DominantValue=BLANK",
+      "IndentedOperation": "                SpoolLookup: LookupPhyOp LogOp=ScalarVarProxy Double #Records=1 #KeyCols=0 #ValueCols=1 DominantValue=BLANK",
+      "Level": 4,
+      "RowNumber": 6
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                    AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "Level": 5,
+      "RowNumber": 7
+    },
+    {
+      "Records": null,
+      "Operation": "UnionAll: IterPhyOp LogOp=If",
+      "IndentedOperation": "                        UnionAll: IterPhyOp LogOp=If",
+      "Level": 6,
+      "RowNumber": 8
+    },
+    {
+      "Records": null,
+      "Operation": "CrossApply: IterPhyOp LogOp=Multiply",
+      "IndentedOperation": "                            CrossApply: IterPhyOp LogOp=Multiply",
+      "Level": 7,
+      "RowNumber": 9
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=1 #KeyCols=0 #ValueCols=0",
+      "IndentedOperation": "                                Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=1 #KeyCols=0 #ValueCols=0",
+      "Level": 8,
+      "RowNumber": 10
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<GroupBy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                    AggregationSpool<GroupBy>: SpoolPhyOp #Records=1",
+      "Level": 9,
+      "RowNumber": 11
+    },
+    {
+      "Records": null,
+      "Operation": "PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "IndentedOperation": "                                        PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "Level": 10,
+      "RowNumber": 12
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=ScalarVarProxy #Records=1 #KeyCols=0 #ValueCols=1",
+      "IndentedOperation": "                                            Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=ScalarVarProxy #Records=1 #KeyCols=0 #ValueCols=1",
+      "Level": 11,
+      "RowNumber": 13
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "Level": 12,
+      "RowNumber": 14
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "IndentedOperation": "                                                    Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "Level": 13,
+      "RowNumber": 15
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "IndentedOperation": "                                                        Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "Level": 14,
+      "RowNumber": 16
+    },
+    {
+      "Records": 1,
+      "Operation": "ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                            ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "Level": 15,
+      "RowNumber": 17
+    },
+    {
+      "Records": null,
+      "Operation": "Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "IndentedOperation": "                                                                Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "Level": 16,
+      "RowNumber": 18
+    },
+    {
+      "Records": null,
+      "Operation": "Constant: LookupPhyOp LogOp=Constant Double 234",
+      "IndentedOperation": "                                                        Constant: LookupPhyOp LogOp=Constant Double 234",
+      "Level": 14,
+      "RowNumber": 19
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=Multiply",
+      "IndentedOperation": "                                Extend_Lookup: IterPhyOp LogOp=Multiply",
+      "Level": 8,
+      "RowNumber": 20
+    },
+    {
+      "Records": null,
+      "Operation": "CrossApply: IterPhyOp LogOp=Sum_Vertipaq",
+      "IndentedOperation": "                                    CrossApply: IterPhyOp LogOp=Sum_Vertipaq",
+      "Level": 9,
+      "RowNumber": 21
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=1 #KeyCols=0 #ValueCols=0",
+      "IndentedOperation": "                                        Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=1 #KeyCols=0 #ValueCols=0",
+      "Level": 10,
+      "RowNumber": 22
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<GroupBy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                            AggregationSpool<GroupBy>: SpoolPhyOp #Records=1",
+      "Level": 11,
+      "RowNumber": 23
+    },
+    {
+      "Records": null,
+      "Operation": "PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "IndentedOperation": "                                                PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "Level": 12,
+      "RowNumber": 24
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=ScalarVarProxy #Records=1 #KeyCols=0 #ValueCols=1",
+      "IndentedOperation": "                                                    Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=ScalarVarProxy #Records=1 #KeyCols=0 #ValueCols=1",
+      "Level": 13,
+      "RowNumber": 25
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                        AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "Level": 14,
+      "RowNumber": 26
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "IndentedOperation": "                                                            Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "Level": 15,
+      "RowNumber": 27
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "IndentedOperation": "                                                                Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "Level": 16,
+      "RowNumber": 28
+    },
+    {
+      "Records": 1,
+      "Operation": "ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                                    ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "Level": 17,
+      "RowNumber": 29
+    },
+    {
+      "Records": null,
+      "Operation": "Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "IndentedOperation": "                                                                        Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "Level": 18,
+      "RowNumber": 30
+    },
+    {
+      "Records": null,
+      "Operation": "Constant: LookupPhyOp LogOp=Constant Double 234",
+      "IndentedOperation": "                                                                Constant: LookupPhyOp LogOp=Constant Double 234",
+      "Level": 16,
+      "RowNumber": 31
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Sum_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "IndentedOperation": "                                        Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Sum_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "Level": 10,
+      "RowNumber": 32
+    },
+    {
+      "Records": 1,
+      "Operation": "ProjectionSpool<ProjectFusion<Copy>>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                            ProjectionSpool<ProjectFusion<Copy>>: SpoolPhyOp #Records=1",
+      "Level": 11,
+      "RowNumber": 33
+    },
+    {
+      "Records": null,
+      "Operation": "Cache: IterPhyOp #FieldCols=0 #ValueCols=1",
+      "IndentedOperation": "                                                Cache: IterPhyOp #FieldCols=0 #ValueCols=1",
+      "Level": 12,
+      "RowNumber": 34
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=1 #KeyCols=0 #ValueCols=0",
+      "IndentedOperation": "                                                    Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=1 #KeyCols=0 #ValueCols=0",
+      "Level": 13,
+      "RowNumber": 35
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<GroupBy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                        AggregationSpool<GroupBy>: SpoolPhyOp #Records=1",
+      "Level": 14,
+      "RowNumber": 36
+    },
+    {
+      "Records": null,
+      "Operation": "PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "IndentedOperation": "                                                            PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "Level": 15,
+      "RowNumber": 37
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=ScalarVarProxy #Records=1 #KeyCols=0 #ValueCols=1",
+      "IndentedOperation": "                                                                Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=ScalarVarProxy #Records=1 #KeyCols=0 #ValueCols=1",
+      "Level": 16,
+      "RowNumber": 38
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                                    AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "Level": 17,
+      "RowNumber": 39
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "IndentedOperation": "                                                                        Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "Level": 18,
+      "RowNumber": 40
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "IndentedOperation": "                                                                            Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "Level": 19,
+      "RowNumber": 41
+    },
+    {
+      "Records": 1,
+      "Operation": "ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                                                ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "Level": 20,
+      "RowNumber": 42
+    },
+    {
+      "Records": null,
+      "Operation": "Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "IndentedOperation": "                                                                                    Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "Level": 21,
+      "RowNumber": 43
+    },
+    {
+      "Records": null,
+      "Operation": "Constant: LookupPhyOp LogOp=Constant Double 234",
+      "IndentedOperation": "                                                                            Constant: LookupPhyOp LogOp=Constant Double 234",
+      "Level": 19,
+      "RowNumber": 44
+    },
+    {
+      "Records": null,
+      "Operation": "Constant: LookupPhyOp LogOp=Constant Double 0.8",
+      "IndentedOperation": "                                    Constant: LookupPhyOp LogOp=Constant Double 0.8",
+      "Level": 9,
+      "RowNumber": 45
+    },
+    {
+      "Records": null,
+      "Operation": "CrossApply: IterPhyOp LogOp=Multiply",
+      "IndentedOperation": "                            CrossApply: IterPhyOp LogOp=Multiply",
+      "Level": 7,
+      "RowNumber": 46
+    },
+    {
+      "Records": 0,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=0 #KeyCols=0 #ValueCols=0",
+      "IndentedOperation": "                                Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=0 #KeyCols=0 #ValueCols=0",
+      "Level": 8,
+      "RowNumber": 47
+    },
+    {
+      "Records": 0,
+      "Operation": "AggregationSpool<GroupBy>: SpoolPhyOp #Records=0",
+      "IndentedOperation": "                                    AggregationSpool<GroupBy>: SpoolPhyOp #Records=0",
+      "Level": 9,
+      "RowNumber": 48
+    },
+    {
+      "Records": null,
+      "Operation": "PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "IndentedOperation": "                                        PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "Level": 10,
+      "RowNumber": 49
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=ScalarVarProxy",
+      "IndentedOperation": "                                            Extend_Lookup: IterPhyOp LogOp=ScalarVarProxy",
+      "Level": 11,
+      "RowNumber": 50
+    },
+    {
+      "Records": null,
+      "Operation": "SingletonTable: IterPhyOp LogOp=ScalarVarProxy",
+      "IndentedOperation": "                                                SingletonTable: IterPhyOp LogOp=ScalarVarProxy",
+      "Level": 12,
+      "RowNumber": 51
+    },
+    {
+      "Records": 1,
+      "Operation": "SpoolLookup: LookupPhyOp LogOp=ScalarVarProxy Boolean #Records=1 #KeyCols=0 #ValueCols=1 DominantValue=false",
+      "IndentedOperation": "                                                SpoolLookup: LookupPhyOp LogOp=ScalarVarProxy Boolean #Records=1 #KeyCols=0 #ValueCols=1 DominantValue=false",
+      "Level": 12,
+      "RowNumber": 52
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                    AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "Level": 13,
+      "RowNumber": 53
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "IndentedOperation": "                                                        Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "Level": 14,
+      "RowNumber": 54
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "IndentedOperation": "                                                            Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "Level": 15,
+      "RowNumber": 55
+    },
+    {
+      "Records": 1,
+      "Operation": "ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                                ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "Level": 16,
+      "RowNumber": 56
+    },
+    {
+      "Records": null,
+      "Operation": "Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "IndentedOperation": "                                                                    Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "Level": 17,
+      "RowNumber": 57
+    },
+    {
+      "Records": null,
+      "Operation": "Constant: LookupPhyOp LogOp=Constant Double 234",
+      "IndentedOperation": "                                                            Constant: LookupPhyOp LogOp=Constant Double 234",
+      "Level": 15,
+      "RowNumber": 58
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=Multiply",
+      "IndentedOperation": "                                Extend_Lookup: IterPhyOp LogOp=Multiply",
+      "Level": 8,
+      "RowNumber": 59
+    },
+    {
+      "Records": null,
+      "Operation": "CrossApply: IterPhyOp LogOp=Sum_Vertipaq",
+      "IndentedOperation": "                                    CrossApply: IterPhyOp LogOp=Sum_Vertipaq",
+      "Level": 9,
+      "RowNumber": 60
+    },
+    {
+      "Records": 0,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=0 #KeyCols=0 #ValueCols=0",
+      "IndentedOperation": "                                        Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=PredicateCheck #Records=0 #KeyCols=0 #ValueCols=0",
+      "Level": 10,
+      "RowNumber": 61
+    },
+    {
+      "Records": 0,
+      "Operation": "AggregationSpool<GroupBy>: SpoolPhyOp #Records=0",
+      "IndentedOperation": "                                            AggregationSpool<GroupBy>: SpoolPhyOp #Records=0",
+      "Level": 11,
+      "RowNumber": 62
+    },
+    {
+      "Records": null,
+      "Operation": "PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "IndentedOperation": "                                                PredicateCheck: IterPhyOp LogOp=PredicateCheck",
+      "Level": 12,
+      "RowNumber": 63
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=ScalarVarProxy",
+      "IndentedOperation": "                                                    Extend_Lookup: IterPhyOp LogOp=ScalarVarProxy",
+      "Level": 13,
+      "RowNumber": 64
+    },
+    {
+      "Records": null,
+      "Operation": "SingletonTable: IterPhyOp LogOp=ScalarVarProxy",
+      "IndentedOperation": "                                                        SingletonTable: IterPhyOp LogOp=ScalarVarProxy",
+      "Level": 14,
+      "RowNumber": 65
+    },
+    {
+      "Records": 1,
+      "Operation": "SpoolLookup: LookupPhyOp LogOp=ScalarVarProxy Boolean #Records=1 #KeyCols=0 #ValueCols=1 DominantValue=false",
+      "IndentedOperation": "                                                        SpoolLookup: LookupPhyOp LogOp=ScalarVarProxy Boolean #Records=1 #KeyCols=0 #ValueCols=1 DominantValue=false",
+      "Level": 14,
+      "RowNumber": 66
+    },
+    {
+      "Records": 1,
+      "Operation": "AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                            AggregationSpool<Copy>: SpoolPhyOp #Records=1",
+      "Level": 15,
+      "RowNumber": 67
+    },
+    {
+      "Records": null,
+      "Operation": "Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "IndentedOperation": "                                                                Extend_Lookup: IterPhyOp LogOp=GreaterThan",
+      "Level": 16,
+      "RowNumber": 68
+    },
+    {
+      "Records": 1,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "IndentedOperation": "                                                                    Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Average_Vertipaq #Records=1 #KeyCols=158 #ValueCols=1",
+      "Level": 17,
+      "RowNumber": 69
+    },
+    {
+      "Records": 1,
+      "Operation": "ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "IndentedOperation": "                                                                        ProjectionSpool<ProjectFusion<Average>>: SpoolPhyOp #Records=1",
+      "Level": 18,
+      "RowNumber": 70
+    },
+    {
+      "Records": null,
+      "Operation": "Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "IndentedOperation": "                                                                            Cache: IterPhyOp #FieldCols=0 #ValueCols=2",
+      "Level": 19,
+      "RowNumber": 71
+    },
+    {
+      "Records": null,
+      "Operation": "Constant: LookupPhyOp LogOp=Constant Double 234",
+      "IndentedOperation": "                                                                    Constant: LookupPhyOp LogOp=Constant Double 234",
+      "Level": 17,
+      "RowNumber": 72
+    },
+    {
+      "Records": 0,
+      "Operation": "Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Sum_Vertipaq #Records=0 #KeyCols=158 #ValueCols=1",
+      "IndentedOperation": "                                        Spool_Iterator<SpoolIterator>: IterPhyOp LogOp=Sum_Vertipaq #Records=0 #KeyCols=158 #ValueCols=1",
+      "Level": 10,
+      "RowNumber": 73
+    },
+    {
+      "Records": 0,
+      "Operation": "ProjectionSpool<ProjectFusion<Copy>>: SpoolPhyOp #Records=0",
+      "IndentedOperation": "                                            ProjectionSpool<ProjectFusion<Copy>>: SpoolPhyOp #Records=0",
+      "Level": 11,
+      "RowNumber": 74
+    },
+    {
+      "Records": null,
+      "Operation": "Constant: LookupPhyOp LogOp=Constant Double 1.3",
+      "IndentedOperation": "                                    Constant: LookupPhyOp LogOp=Constant Double 1.3",
+      "Level": 9,
+      "RowNumber": 75
+    }
+  ],
+  "LogicalQueryPlanRows": [
+    {
+      "Operation": "AddColumns: RelLogOp DependOnCols()() 0-0 RequiredCols(0)(''[Custo Total Markup])",
+      "IndentedOperation": "AddColumns: RelLogOp DependOnCols()() 0-0 RequiredCols(0)(''[Custo Total Markup])",
+      "Level": 0,
+      "RowNumber": 1
+    },
+    {
+      "Operation": "VarScope: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "    VarScope: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "Level": 1,
+      "RowNumber": 2
+    },
+    {
+      "Operation": "If: ScaLogOp VarName=Analise DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "        If: ScaLogOp VarName=Analise DependOnCols()() Double DominantValue=BLANK",
+      "Level": 2,
+      "RowNumber": 3
+    },
+    {
+      "Operation": "GreaterThan: ScaLogOp DependOnCols()() Boolean DominantValue=false",
+      "IndentedOperation": "            GreaterThan: ScaLogOp DependOnCols()() Boolean DominantValue=false",
+      "Level": 3,
+      "RowNumber": 4
+    },
+    {
+      "Operation": "Average_Vertipaq: ScaLogOp MeasureRef=[Lojas Vendas - Custo Médio] DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "                Average_Vertipaq: ScaLogOp MeasureRef=[Lojas Vendas - Custo Médio] DependOnCols()() Double DominantValue=BLANK",
+      "Level": 4,
+      "RowNumber": 5
+    },
+    {
+      "Operation": "Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols(61)('FactResellerSales'[ProductStandardCost])",
+      "IndentedOperation": "                    Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols(61)('FactResellerSales'[ProductStandardCost])",
+      "Level": 5,
+      "RowNumber": 6
+    },
+    {
+      "Operation": "'FactResellerSales'[ProductStandardCost]: ScaLogOp DependOnCols(61)('FactResellerSales'[ProductStandardCost]) Double DominantValue=NONE",
+      "IndentedOperation": "                    'FactResellerSales'[ProductStandardCost]: ScaLogOp DependOnCols(61)('FactResellerSales'[ProductStandardCost]) Double DominantValue=NONE",
+      "Level": 5,
+      "RowNumber": 7
+    },
+    {
+      "Operation": "Constant: ScaLogOp DependOnCols()() Double DominantValue=234",
+      "IndentedOperation": "                Constant: ScaLogOp DependOnCols()() Double DominantValue=234",
+      "Level": 4,
+      "RowNumber": 8
+    },
+    {
+      "Operation": "PredicateCheck: RelLogOp DependOnCols()() RequiredCols()()",
+      "IndentedOperation": "            PredicateCheck: RelLogOp DependOnCols()() RequiredCols()()",
+      "Level": 3,
+      "RowNumber": 9
+    },
+    {
+      "Operation": "ScalarVarProxy: ScaLogOp DependOnCols()() Boolean DominantValue=false",
+      "IndentedOperation": "                ScalarVarProxy: ScaLogOp DependOnCols()() Boolean DominantValue=false",
+      "Level": 4,
+      "RowNumber": 10
+    },
+    {
+      "Operation": "PredicateCheck: RelLogOp DependOnCols()() RequiredCols()()",
+      "IndentedOperation": "            PredicateCheck: RelLogOp DependOnCols()() RequiredCols()()",
+      "Level": 3,
+      "RowNumber": 11
+    },
+    {
+      "Operation": "ScalarVarProxy: ScaLogOp DependOnCols()() Boolean DominantValue=false",
+      "IndentedOperation": "                ScalarVarProxy: ScaLogOp DependOnCols()() Boolean DominantValue=false",
+      "Level": 4,
+      "RowNumber": 12
+    },
+    {
+      "Operation": "Multiply: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "            Multiply: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "Level": 3,
+      "RowNumber": 13
+    },
+    {
+      "Operation": "Sum_Vertipaq: ScaLogOp MeasureRef=[Lojas Vendas - Custo Total] DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "                Sum_Vertipaq: ScaLogOp MeasureRef=[Lojas Vendas - Custo Total] DependOnCols()() Double DominantValue=BLANK",
+      "Level": 4,
+      "RowNumber": 14
+    },
+    {
+      "Operation": "Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols(62)('FactResellerSales'[TotalProductCost])",
+      "IndentedOperation": "                    Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols(62)('FactResellerSales'[TotalProductCost])",
+      "Level": 5,
+      "RowNumber": 15
+    },
+    {
+      "Operation": "'FactResellerSales'[TotalProductCost]: ScaLogOp DependOnCols(62)('FactResellerSales'[TotalProductCost]) Double DominantValue=NONE",
+      "IndentedOperation": "                    'FactResellerSales'[TotalProductCost]: ScaLogOp DependOnCols(62)('FactResellerSales'[TotalProductCost]) Double DominantValue=NONE",
+      "Level": 5,
+      "RowNumber": 16
+    },
+    {
+      "Operation": "Constant: ScaLogOp DependOnCols()() Double DominantValue=0.8",
+      "IndentedOperation": "                Constant: ScaLogOp DependOnCols()() Double DominantValue=0.8",
+      "Level": 4,
+      "RowNumber": 17
+    },
+    {
+      "Operation": "Multiply: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "            Multiply: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "Level": 3,
+      "RowNumber": 18
+    },
+    {
+      "Operation": "Sum_Vertipaq: ScaLogOp MeasureRef=[Lojas Vendas - Custo Total] DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "                Sum_Vertipaq: ScaLogOp MeasureRef=[Lojas Vendas - Custo Total] DependOnCols()() Double DominantValue=BLANK",
+      "Level": 4,
+      "RowNumber": 19
+    },
+    {
+      "Operation": "Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols(62)('FactResellerSales'[TotalProductCost])",
+      "IndentedOperation": "                    Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols(62)('FactResellerSales'[TotalProductCost])",
+      "Level": 5,
+      "RowNumber": 20
+    },
+    {
+      "Operation": "'FactResellerSales'[TotalProductCost]: ScaLogOp DependOnCols(62)('FactResellerSales'[TotalProductCost]) Double DominantValue=NONE",
+      "IndentedOperation": "                    'FactResellerSales'[TotalProductCost]: ScaLogOp DependOnCols(62)('FactResellerSales'[TotalProductCost]) Double DominantValue=NONE",
+      "Level": 5,
+      "RowNumber": 21
+    },
+    {
+      "Operation": "Constant: ScaLogOp DependOnCols()() Double DominantValue=1.3",
+      "IndentedOperation": "                Constant: ScaLogOp DependOnCols()() Double DominantValue=1.3",
+      "Level": 4,
+      "RowNumber": 22
+    },
+    {
+      "Operation": "Sum_Vertipaq: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "IndentedOperation": "        Sum_Vertipaq: ScaLogOp DependOnCols()() Double DominantValue=BLANK",
+      "Level": 2,
+      "RowNumber": 23
+    },
+    {
+      "Operation": "Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols()()",
+      "IndentedOperation": "            Scan_Vertipaq: RelLogOp DependOnCols()() 0-104 RequiredCols()()",
+      "Level": 3,
+      "RowNumber": 24
+    },
+    {
+      "Operation": "ScalarVarProxy: ScaLogOp DependOnCols()() Double DominantValue=BLANK RefVarName=Analise",
+      "IndentedOperation": "            ScalarVarProxy: ScaLogOp DependOnCols()() Double DominantValue=BLANK RefVarName=Analise",
+      "Level": 3,
+      "RowNumber": 25
+    }
+  ]
+}
